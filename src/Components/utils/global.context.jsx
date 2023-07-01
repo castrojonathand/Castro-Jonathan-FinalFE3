@@ -1,12 +1,13 @@
 
-import { createContext,useContext,useEffect,useReducer } from "react";
+import { createContext,useContext,useEffect,useReducer} from "react";
 
 export const ContextGlobal  = createContext();
 
 export const initialState = {
-  theme: "", 
+  theme: "true", //si theme es true el modo sera light de lo contrario dark....
   listData: [],
-  dentist: {}
+  dentist: {},
+  favs: JSON.parse(localStorage.getItem("favs")) || []
 } 
 
 const dataReducer = (state,action) =>{
@@ -15,10 +16,14 @@ const dataReducer = (state,action) =>{
         return {...state, listData: action.payload}
 
       case 'GET_DENTIST':
-        return {...state, destist: action.payload}
+        return {...state, dentist: action.payload}
       
-      case 'GET_THEME':
+      case 'CHANGE_THEME':
         return {...state, theme: action.payload}
+      
+      case 'ADD_FAV':
+        return {...state, favs:  action.payload}   
+      
 
       default:
         throw new Error(`Invalid action ${action.Error.message}`);
@@ -34,15 +39,16 @@ const Context = ({ children }) => {
     useEffect(() =>{
       fetch(urlList)
       .then(res=> res.json())
-      .then(data=> dataDispatch({type:'GET_LIST',payload:data} ))
+      .then(data=> dataDispatch({type:'GET_LIST', payload:data} ))
       .catch(error => console.log(error))
 
     },[]) 
-    console.log(dataState); 
+    console.log(dataState)     
   
     return (
       <ContextGlobal.Provider value={{
-        dataState, dataDispatch
+        dataState,
+        dataDispatch
       }}>
         {children}
       </ContextGlobal.Provider>

@@ -1,5 +1,5 @@
 body {
-  margin: 0;
+  margin: 100px 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
@@ -12,11 +12,14 @@ code {
     monospace;
 }
 .favButton{
-  background-color: rgba(136, 136, 136, 0.116);
+  
+  background-color: rgba(32, 155, 207, 0.278);
   padding: 10px;
   border: none;
-  width: 100%;
+  width: 250px;
   cursor: pointer;
+  border-radius: 0px 0px 15px 15px;
+  font-size: 15px;
 }
 
 h1{
@@ -24,16 +27,24 @@ h1{
 }
 
 nav{
-  display: flex;
-  width: 80vw;
-  justify-content: flex-start;
-  padding: 1rem;
+  background-color: rgb(79, 156, 173);
+  display: flex;   
+  justify-content: space-between;
+  padding: 0.5rem;
+  align-items: center;
+  position: fixed;
+  width: 100vw;
+  top: 0;
+  
+}
+div > img {
+  width: 200px;
+  margin: 0;
 }
 
 a{
   color: #000;
-  text-decoration: none;
-  margin: 5px;
+  text-decoration: none;  
   cursor: pointer;
 }
 a:hover{
@@ -41,15 +52,17 @@ a:hover{
 } 
 
 footer {
+  background-color: rgb(79, 156, 173);
   display: flex;
   justify-content: center;
   text-align: center;
   padding: 2rem;
   position: relative;
   bottom: 0;
-  width: 90%;
+  width: 100vw;
   height: 40px;
   margin-top: 2rem;
+  bottom: 0;
 }
 
 footer > img{
@@ -65,9 +78,25 @@ form{
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  width: 300px;
-  height: 100px;
+  width: 28vw;  
   margin: 0 auto;
+  padding: 2rem;
+  border: 1px solid rgb(17, 17, 17);
+  border-radius: 25px;
+}
+.img {
+  width: 250px;  
+  border-radius: 15px 15px 0px 0px;
+}
+
+.detailCard{
+
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  width: 45vw;
+  justify-content: inherit;  
+
 }
 
 .card{
@@ -76,8 +105,8 @@ form{
   justify-content: space-around;
   flex-direction: column;
   align-items: center;
-  width: 230px;
-  padding: 0.5rem 0.5rem 0 0.5rem;
+  width: 233px;
+  padding: 0rem 0.5rem 0 0.5rem;
   border: 0.5px solid rgb(136, 136, 136);
   border-radius: 15px;
 }
@@ -96,6 +125,22 @@ form{
   margin: 0 auto;
 }
 
+.navigate{
+  display: flex;
+ 
+}
+
+.buttonNav{
+  font-size: 25px;
+  width: 40px;
+}
+
+.link{  
+    width: 20vw;
+    display: flex;
+    justify-content: space-around;
+    
+}
 table {
     border-collapse: collapse;
     border-spacing: 0;
