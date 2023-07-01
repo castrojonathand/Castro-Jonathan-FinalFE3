@@ -17,6 +17,7 @@ const Detail = () => {
     .then((res) => res.json())
     .then((data) => dataDispatch({type:'GET_DENTIST',payload: data}))
     .catch((err) => console.log(err))
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   },[])
 
   console.log(dataState.dentist);
