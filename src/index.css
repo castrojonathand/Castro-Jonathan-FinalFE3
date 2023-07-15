@@ -1,3 +1,5 @@
+
+
 body {
   margin: 100px 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -11,8 +13,7 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
-.favButton{
-  
+.favButton{  
   background-color: rgba(32, 155, 207, 0.278);
   padding: 10px;
   border: none;
@@ -21,48 +22,62 @@ code {
   border-radius: 0px 0px 15px 15px;
   font-size: 15px;
 }
+.favButton:hover{
+  background-color: rgba(66, 180, 228, 0.892);
+  box-shadow: rgba(0, 0, 0, 0.25) px 0px 10px 2px;
+}
 
 h1{
+  text-align: center;  
+}
+h3{
   text-align: center;
+  margin-top: 0.5rem;
 }
 
 nav{
   background-color: rgb(79, 156, 173);
   display: flex;   
-  justify-content: space-between;
+  justify-content: space-between;  
   padding: 0.5rem;
   align-items: center;
   position: fixed;
   width: 100vw;
-  top: 0;
-  
+  top: 0;  
+}
+.navigate{
+  display: flex;
 }
 div > img {
-  width: 200px;
+  width: 150px;
   margin: 0;
 }
-
 a{
   color: #000;
   text-decoration: none;  
   cursor: pointer;
+  
 }
 a:hover{
-  color: rgb(136, 136, 136);
+  color: rgb(136, 136, 136);  
 } 
+
+
+
+button:hover {
+  cursor: pointer;
+  color: rgb(63, 62, 62);
+  
+}
 
 footer {
   background-color: rgb(79, 156, 173);
   display: flex;
-  justify-content: center;
-  text-align: center;
-  padding: 2rem;
-  position: relative;
-  bottom: 0;
+  justify-content: center;  
+  padding: 1.5rem;  
   width: 100vw;
   height: 40px;
   margin-top: 2rem;
-  bottom: 0;
 }
 
 footer > img{
@@ -71,7 +86,7 @@ footer > img{
 }
 footer > p{
   margin: 0;
-  padding-top: 0.7rem;
+  padding-top: 0.5rem;
 }
 
 form{
@@ -96,7 +111,7 @@ form{
   gap: 1rem;
   width: 45vw;
   justify-content: inherit;  
-
+  
 }
 
 .card{
@@ -112,7 +127,8 @@ form{
 }
 
 .card:hover{
-  border: 0.5px solid rgb(206, 217, 142);
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 0px 25px 5px;
+  border: 0.5px solid rgb(5, 5, 0);
 }
 
 .card-grid{  
@@ -125,29 +141,27 @@ form{
   margin: 0 auto;
 }
 
-.navigate{
-  display: flex;
- 
-}
-
 .buttonNav{
-  font-size: 25px;
+  font-size: 20px;
   width: 40px;
+  
 }
 
-.link{  
-    width: 20vw;
-    display: flex;
-    justify-content: space-around;
-    
+.link{
+  
+  width: 20vw;
+  display: flex;
+  justify-content: space-around; 
+  gap: 1rem;   
 }
+
 table {
-    border-collapse: collapse;
-    border-spacing: 0;
-    width: 100%;
-    display: table;
-    border: 1px solid #ccc;
-
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 100%;
+  display: table;
+  border: 1px solid #ccc;
+  
 }
 
 td, th {
@@ -161,9 +175,74 @@ tr:nth-child(even) {
 }
 
 .dark{
-  background-color: #12121296;
+  background-color: #030000ae;
   color: white;
 }
-.dark > a {
+.dark .card{
+  background-color: #87949885;
   color: white;
+}
+.dark a {
+  color: white;
+}
+.dark .card:hover { 
+  box-shadow: rgba(255, 255, 255, 0.572) 0px 0px 25px 5px;
+}
+.dark button{
+  color: white;
+  background-color: rgb(79, 156, 173);
+}
+.navToggle{
+  display: none;
+}
+
+@media (max-width: 768px) {
+
+    .link{
+      position: absolute;
+      top:60px;
+      left:0px;
+      background-color: rgb(79, 156, 173); 
+      color:white;
+      display: flex;
+      flex-direction: column;
+      width: 50%;
+      height: -webkit-fill-avarible;
+      transform: translateX(-101%);
+      transition: 0.3s ease all;
+    }  
+    .link.open{
+      transform: translateX(0) !important;
+    }
+    .hamburg span{
+      display: flex;      
+      width: 30px;
+      height: 4px;
+      background: white;
+      margin: 5px;
+      border-radius: 2px;
+      transform-origin: 5px 0px;
+      transition: all 0.2s linear;
+    }
+    .navToggle{
+      display: flex !important;   
+      align-items: center;      
+      margin: 15px;
+      gap: 1rem;
+    }
+
+    .navigate{
+      display: none;
+    }
+    .hamburg.open > span {
+      transform: rotate(45deg) translate(0px, 0px);
+    }
+    .hamburg.open span:nth-child(2){
+        display: none;
+    }
+    .hamburg.open span:nth-child(3) {
+        transform: rotate(-45deg) translate(-6px,1px);
+    }
+
+
 }

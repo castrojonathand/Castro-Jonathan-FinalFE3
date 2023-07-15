@@ -4,7 +4,7 @@ import { createContext,useContext,useEffect,useReducer} from "react";
 export const ContextGlobal  = createContext();
 
 export const initialState = {
-  theme: "true", //si theme es true el modo sera light de lo contrario dark....
+  theme: true, //si theme es true el modo sera light de lo contrario dark....
   listData: [],
   dentist: {},
   favs: JSON.parse(localStorage.getItem("favs")) || []
@@ -35,7 +35,6 @@ const Context = ({ children }) => {
     const [dataState, dataDispatch] = useReducer(dataReducer,initialState);
 
     const urlList = 'https://jsonplaceholder.typicode.com/users'
-
     useEffect(() =>{
       fetch(urlList)
       .then(res=> res.json())
@@ -43,7 +42,8 @@ const Context = ({ children }) => {
       .catch(error => console.log(error))
 
     },[]) 
-    console.log(dataState)     
+
+    // console.log(dataState)     
   
     return (
       <ContextGlobal.Provider value={{

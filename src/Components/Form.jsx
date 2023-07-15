@@ -10,8 +10,7 @@ const Form = () => {
     error: false   
   })
   const handleSubmit = (e) => {
-    e.preventDefault()
-    console.log(state.nombre.length+ " esto es nombre")
+    e.preventDefault()    
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
     const emailValid = emailRegex.test(state.email)
     
@@ -43,6 +42,6 @@ const Form = () => {
         
       </form>
     </div>
-  );
-};
+  )
+}
 export default Form

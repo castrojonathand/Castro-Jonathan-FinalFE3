@@ -1,13 +1,17 @@
+// import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
+// import { useContextGlobal } from "./utils/global.context";
+
 
 const Card = ({ name, username, id, toggle}) => {
+
 
   const AddFav = ()=>{
     // Aqui iria la logica para agregar la Card en el localStorage    
     console.log(toggle+" apenas entra toggle[CARD]");    
     
-    const item = { name, username, id, toggle }    
-    
+    const item = { name, username, id, toggle }   
+
     const favorites = JSON.parse(localStorage.getItem("favs")) || []
     
     const exists = favorites.some((favorite) => favorite.id === id)
@@ -15,23 +19,22 @@ const Card = ({ name, username, id, toggle}) => {
     if (!exists) {
           
       favorites.push(item);
-      item.toggle = true
-      console.log(item.toggle+ "  soy if true")
+      item.toggle = true      
       
-      localStorage.setItem("favs", JSON.stringify(favorites))      
+      localStorage.setItem("favs", JSON.stringify(favorites))
+      
       
       console.log("Elemento agregado a favoritos:", item)
     } else {
       item.toggle = false
-      console.log(item.toggle+"  soy else")
+      
       const quitFav = favorites.filter(favoritos => favoritos.id !== id)
       console.log(quitFav);
       localStorage.setItem("favs", JSON.stringify(quitFav))      
       console.log("El elemento se quito de favoritos:", item)
     }      
-  }
-  
-  console.log(toggle+" toggle antes del return")
+
+  }   
   return (
     
     <div className="card">
