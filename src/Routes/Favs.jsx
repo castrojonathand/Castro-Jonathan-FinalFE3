@@ -15,7 +15,7 @@ const Favs = () => {
     dataDispatch({type:'ADD_FAV', payload: dataState.favs})   
     dataState.favs = JSON.parse(localStorage.getItem("favs"));    
     
-    },[dataState]) 
+    },[dataState.favs]) 
     
   return (
     <>
