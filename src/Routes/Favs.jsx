@@ -1,21 +1,20 @@
 import { useEffect } from "react";
 import Card from "../Components/Card";
-import { useContextGlobal } from "../Components/utils/global.context";
+import { useGlobalContext } from "../Components/utils/global.context";
 
 //Este componente debera ser estilado como "dark" o "light" dependiendo del theme del Context
 
 const Favs = () => {
 
-  const {dataState,dataDispatch} = useContextGlobal()
+  
   // eslint-disable-next-line no-lone-blocks
   {/* este componente debe consumir los destacados del localStorage */}  
-  
+  const {dataState, dataDispatch}=useGlobalContext()
   useEffect(() =>{
-    const localFavs = JSON.parse(localStorage.getItem("favs")) || []
-    // console.log(localFavs);
-    dataDispatch({type:'ADD_FAV', payload: localFavs})
+    console.log("Local Favs",dataState.favs)
+    dataDispatch({type:'ADD_FAV', payload: dataState.favs})   
+    dataState.favs = JSON.parse(localStorage.getItem("favs"));    
     
-    // eslint-disable-next-line react-hooks/exhaustive-deps
     },[dataState.favs]) 
     
   return (
@@ -25,7 +24,7 @@ const Favs = () => {
             {/* Deberan renderizar una Card por cada uno de ellos */}
             <div className="card-grid">
               {dataState.favs.map(fav => <div key = {fav.id}>                   
-                <Card name={fav.name} username={fav.username} id={fav.id}/>             
+                <Card name={fav.name} username={fav.username} id={fav.id} toogle={fav.toggle}/>             
               </div> )}
             </div>        
       </div>

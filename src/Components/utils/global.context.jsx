@@ -1,7 +1,7 @@
 
 import { createContext,useContext,useEffect,useReducer} from "react";
 
-export const ContextGlobal  = createContext();
+export const GlobalContext  = createContext()
 
 export const initialState = {
   theme: true, //si theme es true el modo sera light de lo contrario dark....
@@ -42,18 +42,20 @@ const Context = ({ children }) => {
       .catch(error => console.log(error))
 
     },[]) 
-
-    // console.log(dataState)     
+    console.log(dataState)
+        
+    dataState.favs = JSON.parse(localStorage.getItem("favs")) || [];
+    
   
     return (
-      <ContextGlobal.Provider value={{
+      <GlobalContext.Provider value={{
         dataState,
         dataDispatch
       }}>
         {children}
-      </ContextGlobal.Provider>
+      </GlobalContext.Provider>
     );
 };
 export default Context
 
-export const useContextGlobal = () => useContext(ContextGlobal)
+export const useGlobalContext = () => useContext(GlobalContext)

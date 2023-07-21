@@ -1,8 +1,8 @@
 import React from 'react'
-import { useContextGlobal } from './utils/global.context'
+import { useGlobalContext } from './utils/global.context'
 
 const Footer = () => {
-  const {dataState}= useContextGlobal()
+  const {dataState}= useGlobalContext()
   return (
     <footer className={dataState.theme ? 'light':'dark'} >
         <p>Powered by</p>

@@ -47,6 +47,7 @@ nav{
 }
 .navigate{
   display: flex;
+  gap: 0.4rem;
 }
 div > img {
   width: 150px;
@@ -142,8 +143,9 @@ form{
 }
 
 .buttonNav{
-  font-size: 20px;
-  width: 40px;
+  font-size: 17px;  
+  width: 35px;
+  height: 33px;
   
 }
 

@@ -1,11 +1,11 @@
 import React, { useEffect } from 'react'
-import { useContextGlobal } from '../Components/utils/global.context'
+import { useGlobalContext } from '../Components/utils/global.context'
 import { useParams } from 'react-router-dom'
 
 //Este componente debera ser estilado como "dark" o "light" dependiendo del theme del Context
 
 const Detail = () => {
-  const {dataState,dataDispatch} = useContextGlobal()
+  const {dataState,dataDispatch} = useGlobalContext()
 
   // Consumiendo el parametro dinamico de la URL deberan hacer un fetch a un user en especifico
   const params = useParams()

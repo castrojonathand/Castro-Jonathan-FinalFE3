@@ -1,40 +1,45 @@
 // import React, { useEffect } from "react";
+// import { useEffect } from "react";
 import { Link } from "react-router-dom";
 // import { useContextGlobal } from "./utils/global.context";
 
 
-const Card = ({ name, username, id, toggle}) => {
+const Card = ({ name, username, id, toggle,setToggle}) => {
+  
 
-
+  console.log(toggle)
   const AddFav = ()=>{
-    // Aqui iria la logica para agregar la Card en el localStorage    
-    console.log(toggle+" apenas entra toggle[CARD]");    
+    // Aqui iria la logica para agregar la Card en el localStorage      
     
-    const item = { name, username, id, toggle }   
-
-    const favorites = JSON.parse(localStorage.getItem("favs")) || []
     
-    const exists = favorites.some((favorite) => favorite.id === id)
+        console.log(toggle+" apenas entra toggle[CARD]");       
+        
+        const item = { name, username, id, toggle }  
+        
+        console.log(item.toggle)
 
-    if (!exists) {
+        const favorites = JSON.parse(localStorage.getItem("favs")) || []
+        
+        const exists = favorites.some((favorite) => favorite.id === id)
+
+        if (!exists) {
+              
+          favorites.push(item);
+          setToggle(true)      
           
-      favorites.push(item);
-      item.toggle = true      
-      
-      localStorage.setItem("favs", JSON.stringify(favorites))
-      
-      
-      console.log("Elemento agregado a favoritos:", item)
-    } else {
-      item.toggle = false
-      
-      const quitFav = favorites.filter(favoritos => favoritos.id !== id)
-      console.log(quitFav);
-      localStorage.setItem("favs", JSON.stringify(quitFav))      
-      console.log("El elemento se quito de favoritos:", item)
-    }      
+          localStorage.setItem("favs", JSON.stringify(favorites))          
+          console.log("favoritos", favorites) ;
+          console.log("Elemento agregado a favoritos:", item)
+        } else {
+          setToggle(false)      
+          const quitFav = favorites.filter(favoritos => favoritos.id !== id)
+          console.log("quitFav: ",quitFav)
+          localStorage.setItem("favs", JSON.stringify(quitFav))      
+          console.log("El elemento se quito de favoritos:", item)
+          } 
+      }
 
-  }   
+      
   return (
     
     <div className="card">
