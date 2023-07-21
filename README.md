@@ -18,4 +18,4 @@
 #API Users: https://jsonplaceholder.typicode.com/users
 
 
-#API por Parametros: https://jsonplaceholder.typicode.com/users/${params.id}
+#API por Parametros: https://jsonplaceholder.typicode.com/users/${id}
