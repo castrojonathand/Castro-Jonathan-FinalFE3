@@ -6,7 +6,7 @@
 
 2- Responsive
 
-3- Navegacion
+3- Navegacion (Botones atras y adelante, PageNotFound)
 
 4- Colorimetria
 
