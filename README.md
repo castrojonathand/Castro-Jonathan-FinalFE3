@@ -14,11 +14,6 @@
 
 6- Depoy en AWS https://aws-reactjs-castro-jonathan.s3.amazonaws.com/home
 
-#APIs: 
-       
-       https://jsonplaceholder.typicode.com/users
+#API Users: https://jsonplaceholder.typicode.com/users
 
-
-       
-
-       https://jsonplaceholder.typicode.com/users/${params.id}
+#API por Parametros: https://jsonplaceholder.typicode.com/users/${params.id}
