@@ -4,15 +4,15 @@ import { Link } from "react-router-dom";
 // import { useContextGlobal } from "./utils/global.context";
 
 
-const Card = ({ name, username, id, toggle,setToggle}) => {
+const Card = ({ name, username, id, toggle}) => {
   
 
-  console.log(toggle)
+  console.log("Apenas entra en CARD",toggle)
   const AddFav = ()=>{
     // Aqui iria la logica para agregar la Card en el localStorage      
     
     
-        console.log(toggle+" apenas entra toggle[CARD]");       
+        console.log(toggle," apenas entra en AddFav [CARD]");       
         
         const item = { name, username, id, toggle }  
         
@@ -25,20 +25,19 @@ const Card = ({ name, username, id, toggle,setToggle}) => {
         if (!exists) {
               
           favorites.push(item);
-          setToggle(true)      
+          toggle = true     
           
           localStorage.setItem("favs", JSON.stringify(favorites))          
           console.log("favoritos", favorites) ;
           console.log("Elemento agregado a favoritos:", item)
         } else {
-          setToggle(false)      
+          toggle = false 
           const quitFav = favorites.filter(favoritos => favoritos.id !== id)
           console.log("quitFav: ",quitFav)
           localStorage.setItem("favs", JSON.stringify(quitFav))      
           console.log("El elemento se quito de favoritos:", item)
           } 
       }
-
       
   return (
     
@@ -49,7 +48,8 @@ const Card = ({ name, username, id, toggle,setToggle}) => {
               <img className="img" src='/images/doctor.jpg' alt="doctor" style={{display:'block'}} />
               <h3>{name}</h3>
               <h4>{username}</h4>
-              <h3>ID:{id}</h3>
+              <h3>ID:{id}</h3>             
+              <h3>estado: {toggle}</h3>
           </div>
         </Link>
         <button onClick={AddFav} className="favButton">

@@ -51,7 +51,8 @@ const Navbar = () => {
         fontSize:'20px',
         borderRadius:'10px',
         padding:'10px'
-        }}>Change theme</button>     
+        }}>{dataState.theme? "Dark theme": "Light theme"}
+        </button>     
     </nav>
     
   )

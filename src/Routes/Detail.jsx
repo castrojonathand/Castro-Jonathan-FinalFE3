@@ -35,15 +35,10 @@ const Detail = () => {
                   <h4>Email: {dataState.dentist.email}</h4>
                   <h4>Phone: {dataState.dentist.phone}</h4>
                   <h4>Website: {dataState.dentist.website}</h4>
-              </div>
-              
+              </div>            
           </div>          
-      </div>     
-      
-      
-
+      </div>
     </>
   )
 }
-
 export default Detail
