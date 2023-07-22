@@ -12,7 +12,7 @@
 
 5- Paginacion (En proceso)
 
-6- Depoy en AWS https://aws-reactjs-castro-jonathan.s3.amazonaws.com/home
+6- Depoy en AWS https://aws-reactjs-castro-jonathan.s3.amazonaws.com/index.html
 
 
 #API Users: https://jsonplaceholder.typicode.com/users
