@@ -4,14 +4,13 @@ import { useGlobalContext } from "../Components/utils/global.context";
 
 //Este componente debera ser estilado como "dark" o "light" dependiendo del theme del Context
 
-const Favs = () => {
-
-  
+const Favs = () => {  
   // eslint-disable-next-line no-lone-blocks
-  {/* este componente debe consumir los destacados del localStorage */}  
+  {/* este componente debe consumir los destacados del localStorage */} 
+  
   const {dataState, dataDispatch}=useGlobalContext()
   useEffect(() =>{
-    console.log("Local Favs",dataState.favs)
+    console.log("Local Favs ",dataState.favs)
     dataDispatch({type:'ADD_FAV', payload: dataState.favs})   
     dataState.favs = JSON.parse(localStorage.getItem("favs"));    
     

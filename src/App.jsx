@@ -23,6 +23,7 @@ function App() {
             <Route path="/favs" element={<Favs />} />
             <Route path="/*" element={<PageNotFound />} />
           </Routes>
+          
           <Pagination defaultCurrent={1} total={30} />
         <Footer/>
       </div>
