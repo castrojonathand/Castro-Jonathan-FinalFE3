@@ -1,6 +1,21 @@
-# Proyecto que consume una API que devuelve informacion de 10 dentistas los cuales son renderizados en cartas de presentacion para una mejor visualizacion
+# Proyecto que consume una API la cual devuelve informacion de 10 dentistas que son renderizados en cartas de presentacion para una mejor visualizacion
 
-#APIs: 
-       https://jsonplaceholder.typicode.com/users
+# Aspectos en materia de diseño 
 
-       https://jsonplaceholder.typicode.com/users/${params.id}
+1- Modo oscuro
+
+2- Responsive
+
+3- Navegacion (Botones atras y adelante, PageNotFound)
+
+4- Colorimetria
+
+5- Paginacion (En proceso)
+
+6- Depoy en AWS https://aws-reactjs-castro-jonathan.s3.amazonaws.com/index.html
+
+
+#API Users: https://jsonplaceholder.typicode.com/users
+
+
+#API por Parametros: https://jsonplaceholder.typicode.com/users/${id}
