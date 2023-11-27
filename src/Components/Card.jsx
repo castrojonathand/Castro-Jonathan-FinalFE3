@@ -43,7 +43,7 @@ const Card = ({ name, username, id, toggle}) => {
   return (
     <div className="min-w-min border border-black rounded-2xl">
       <Link to={`/home/dentist/${id}`}>
-        <div className="flex flex-col items-center">
+        <div className="max-w-xs">
           <img
             className="w-full rounded-t-2xl"
             src="/images/doctor.jpg"

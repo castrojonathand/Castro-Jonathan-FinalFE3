@@ -5,6 +5,7 @@
 body {  
   margin: 0;
   width: 100vw;
+  height: 100vh;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
@@ -38,7 +39,7 @@ h3{
 }
 
 nav{
-  background-color: rgb(79, 156, 173);
+  @apply bg-primary;
   display: flex;   
   justify-content: space-between;  
   padding: 0.5rem;
@@ -65,8 +66,6 @@ a:hover{
   color: rgb(136, 136, 136);  
 } 
 
-
-
 button:hover {
   cursor: pointer;
   color: rgb(63, 62, 62);
@@ -74,13 +73,8 @@ button:hover {
 }
 
 footer {
-  background-color: rgb(79, 156, 173);
-  display: flex;
-  justify-content: center;  
-  padding: 1.5rem;  
-  width: 100vw;
-  height: 40px;
-  margin-top: 2rem;
+  background-color: rgb(6 182 212);  
+  
 }
 
 /* footer > img{
@@ -140,6 +134,8 @@ form{
   width: 35px;
   height: 33px;
   padding-bottom: 10px;
+  margin: 2px;
+  border-radius: 10px; 
   
 }
 
@@ -150,16 +146,16 @@ form{
   gap: 1rem;   
 }
 
-/* table {
+table {
   border-collapse: collapse;
   border-spacing: 0;
   width: 100%;
   display: table;
   border: 1px solid #ccc;
   
-} */
+}
 
-/* td, th {
+ td, th {
   border: 1px solid #dddddd;
   text-align: left;
   padding: 8px;
@@ -167,14 +163,23 @@ form{
 
 tr:nth-child(even) {
   background-color: #dddddd;
-} */
+} 
 
 .dark{
-  background-color: #030000ae;
+  background-color: #030000cb;
   color: white;
 }
+.dark #nav{
+  @apply bg-primary;
+  
+}
+
+.dark #pagination{
+  background-color: #87949800;
+}
+
 .dark .card{
-  background-color: #87949885;
+  background-color: #87949854;
   color: white;
 }
 .dark a {

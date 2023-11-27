@@ -19,7 +19,7 @@ const Form = () => {
       setState({...state,message: "Gracias por registrarse", error: false}) 
       
     }else{      
-      setState({...state,message: 'por favor verifique la informacion', error: true})     
+      setState({...state,message: 'por favor verifique la informacion del form', error: true})     
       
     }
   }
@@ -31,14 +31,8 @@ const Form = () => {
         <ul className="m-4 text-start">
           <li>* nombre: mayor a 3 caracteres</li>
           <li>* mail: con @ y .com</li>
-        </ul>
-        {/* <p className="m-4 text-center">          
-          nombre: mayor a 3 caracteres
-        </p>
-        <p className="m-4 text-center">          
-          mail: con @ y .com
-        </p> */}
-        <label> Nombre: </label>
+        </ul>      
+        <label> Name: </label>
         <input
           className="border border-gray-700 rounded-md w-full focus:outline-none focus:ring-2"
           type="text"
