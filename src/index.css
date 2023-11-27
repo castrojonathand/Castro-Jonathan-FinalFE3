@@ -34,8 +34,7 @@ h1{
   text-align: center;  
 }
 h3{
-  text-align: center;
-  margin-top: 0.5rem;
+  text-align: center;  
 }
 
 nav{
@@ -84,7 +83,7 @@ footer {
   margin-top: 2rem;
 }
 
- /* footer > img{
+/* footer > img{
   width: 200px;
   margin: 0;
 }
@@ -119,9 +118,7 @@ form{
   
 } */
 
-.card-grid{
-  @apply grid justify-center sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 flex-wrap h-auto max-w-7xl mx-auto text-center
-}
+
 
 .card:hover{
   box-shadow: rgba(0, 0, 0, 0.25) 0px 0px 25px 5px;
@@ -142,6 +139,7 @@ form{
   font-size: 17px;  
   width: 35px;
   height: 33px;
+  padding-bottom: 10px;
   
 }
 

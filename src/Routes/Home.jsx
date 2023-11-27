@@ -13,7 +13,7 @@ const Home = () => {
   
   return (
     <main className={dataState.theme ? "light" : "dark"}>
-      <div className="mt-[66px] py-4 ">
+      <div className="mt-[60px] py-4 ">
         <h3> (click on the card to see details)</h3>
 
         <div className="grid justify-center sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 flex-wrap h-auto max-w-7xl mx-auto text-center">

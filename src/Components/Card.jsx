@@ -50,9 +50,11 @@ const Card = ({ name, username, id, toggle}) => {
             alt="doctor"
             style={{ display: "block" }}
           />
-          <h3>{name}</h3>
-          <h3>{username}</h3>
-          <h3>ID:{id}</h3>
+          <div className="p-2">
+            <h3>{name}</h3>
+            <h3>{username}</h3>
+            <h3>ID:{id}</h3>
+          </div>
           {/* <h3>estado: {toggle}</h3> */}
         </div>
       </Link>

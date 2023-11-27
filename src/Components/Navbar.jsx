@@ -21,18 +21,19 @@ const Navbar = () => {
       {/* Aqui deberan agregar los liks correspondientes a las rutas definidas */}
       {/* <link to="/"  */}
       {/* Deberan implementar ademas la logica para cambiar de Theme con el button */}
-      <div className='navigate'>
-        
-        <button className='buttonNav' onClick={()=> navigate(-1)}> <ArrowLeftOutlined /></button>
+      <div className='flex'>        
+        <button className='buttonNav' onClick={()=> navigate(-1)}> < ArrowLeftOutlined /></button>
         <button className='buttonNav' onClick={()=> navigate(1)}><ArrowRightOutlined /></button> 
         <img src='/images/DH.png' alt='DH-logo' />
       </div>
       
-      <div className={`link ${isOpen && "open"}`}>
-        <Link to="/home" onClick={()=> setIsOpen(!isOpen)}> <h3>Home</h3></Link>
-        <Link to="/contact" onClick={()=> setIsOpen(!isOpen)}> <h3>Contact</h3></Link>  
-        <Link to="/favs" onClick={()=> setIsOpen(!isOpen)}> <h3>Favs</h3></Link>
-      </div>
+      
+        <div className={`link ${isOpen && "open"}`}>
+          <Link to="/home" onClick={()=> setIsOpen(!isOpen)}> <h3>Home</h3></Link>
+          <Link to="/contact" onClick={()=> setIsOpen(!isOpen)}> <h3>Contact</h3></Link>  
+          <Link to="/favs" onClick={()=> setIsOpen(!isOpen)}> <h3>Favs</h3></Link>
+        </div>
+      
       
       <div className='navToggle'>
 
@@ -46,12 +47,7 @@ const Navbar = () => {
         </div>
       </div>
 
-      <button onClick={changeTheme} style={{
-        marginRight:'50px', 
-        fontSize:'20px',
-        borderRadius:'10px',
-        padding:'10px'
-        }}>{dataState.theme? "Dark theme": "Light theme"}
+      <button onClick={changeTheme} className='mr-4 text-xl bg-white rounded-xl p-2'>{dataState.theme? "Dark theme": "Light theme"}
         </button>     
     </nav>
     
