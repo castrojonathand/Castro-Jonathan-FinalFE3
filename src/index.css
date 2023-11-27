@@ -1,6 +1,6 @@
-/* @tailwind base;
+@tailwind base;
 @tailwind components;
-@tailwind utilities; */
+@tailwind utilities;
 
 body {  
   margin: 0;
@@ -16,7 +16,7 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
-.favButton{  
+/* .favButton{  
   background-color: rgba(32, 155, 207, 0.278);
   padding: 10px;
   border: none;
@@ -24,7 +24,7 @@ code {
   cursor: pointer;
   border-radius: 0px 0px 15px 15px;
   font-size: 15px;
-}
+} */
 .favButton:hover{
   background-color: rgba(66, 180, 228, 0.892);
   box-shadow: rgba(0, 0, 0, 0.25) px 0px 10px 2px;
@@ -84,14 +84,14 @@ footer {
   margin-top: 2rem;
 }
 
-footer > img{
+ /* footer > img{
   width: 200px;
   margin: 0;
 }
 footer > p{
   margin: 0;
   padding-top: 0.5rem;
-}
+} */
 
 form{
   display: flex;
@@ -103,12 +103,13 @@ form{
   border: 1px solid rgb(17, 17, 17);
   border-radius: 25px;
 }
-.img {
+
+/* .img {
   width: 250px;  
   border-radius: 15px 15px 0px 0px;
-}
+} */
 
-.detailCard{
+/* .detailCard{
 
   display: flex;
   flex-wrap: wrap;
@@ -116,18 +117,10 @@ form{
   width: 45vw;
   justify-content: inherit;  
   
-}
+} */
 
-.card{
-  text-align: center;
-  display: flex;
-  justify-content: space-around;
-  flex-direction: column;
-  align-items: center;
-  width: 233px;
-  padding: 0rem 0.5rem 0 0.5rem;
-  border: 0.5px solid rgb(136, 136, 136);
-  border-radius: 15px;
+.card-grid{
+  @apply grid justify-center sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 flex-wrap h-auto max-w-7xl mx-auto text-center
 }
 
 .card:hover{
@@ -135,7 +128,7 @@ form{
   border: 0.5px solid rgb(5, 5, 0);
 }
 
-.card-grid{  
+/* .card-grid{  
   display: flex;
   justify-content: space-evenly;
   gap: 1rem;
@@ -143,7 +136,7 @@ form{
   height: auto;
   flex-wrap: wrap;
   margin: 0 auto;
-}
+} */
 
 .buttonNav{
   font-size: 17px;  
@@ -152,24 +145,23 @@ form{
   
 }
 
-.link{
-  
+.link{  
   width: 20vw;
   display: flex;
   justify-content: space-around; 
   gap: 1rem;   
 }
 
-table {
+/* table {
   border-collapse: collapse;
   border-spacing: 0;
   width: 100%;
   display: table;
   border: 1px solid #ccc;
   
-}
+} */
 
-td, th {
+/* td, th {
   border: 1px solid #dddddd;
   text-align: left;
   padding: 8px;
@@ -177,7 +169,7 @@ td, th {
 
 tr:nth-child(even) {
   background-color: #dddddd;
-}
+} */
 
 .dark{
   background-color: #030000ae;

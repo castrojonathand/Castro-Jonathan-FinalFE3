@@ -41,23 +41,29 @@ const Card = ({ name, username, id, toggle}) => {
   
       
   return (
-    
-    <div className="card">
-        {/* En cada card deberan mostrar en name - username y el id */}   
-        <Link to={`/home/dentist/${id}`}>  
-          <div >
-              <img className="img" src='/images/doctor.jpg' alt="doctor" style={{display:'block'}} />
-              <h3>{name}</h3>
-              <h4>{username}</h4>
-              <h3>ID:{id}</h3>             
-              <h3>estado: {toggle}</h3>
-          </div>
-        </Link>
-        <button onClick={()=> AddFav()} className="favButton">
-          {toggle ? "Add to favorites" : "Remove from favorites"}   
-          </button>        
-        {/* No debes olvidar que la Card a su vez servira como Link hacia la pagina de detalle */}          
-        {/* Ademas deberan integrar la logica para guardar cada Card en el localStorage */}        
+    <div className="min-w-min border border-black rounded-2xl">
+      <Link to={`/home/dentist/${id}`}>
+        <div className="flex flex-col items-center">
+          <img
+            className="w-full rounded-t-2xl"
+            src="/images/doctor.jpg"
+            alt="doctor"
+            style={{ display: "block" }}
+          />
+          <h3>{name}</h3>
+          <h3>{username}</h3>
+          <h3>ID:{id}</h3>
+          {/* <h3>estado: {toggle}</h3> */}
+        </div>
+      </Link>
+      <button
+        onClick={() => AddFav()}
+        className=" bg-sky-600 bg-opacity-25 p-4 border-none w-60 cursor-pointer rounded-b-lg text-base min-w-full"
+      >
+        {toggle ? "Add to favorites" : "Remove from favorites"}
+      </button>
+      {/* No debes olvidar que la Card a su vez servira como Link hacia la pagina de detalle */}
+      {/* Ademas deberan integrar la logica para guardar cada Card en el localStorage */}
     </div>
   );
 };

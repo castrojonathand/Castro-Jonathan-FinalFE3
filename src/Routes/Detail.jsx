@@ -23,20 +23,17 @@ const Detail = () => {
 
   return (
     <>    
-      <h1>Detail to dentist ID: {dataState.dentist.id} </h1>
-      <div className='card-grid'>
-      {/* aqui deberan renderizar la informacion en detalle de un user en especifico */}
-      {/* Deberan mostrar el name - email - phone - website por cada user en especifico */}
-
-          <div className="detailCard">         
+      <div className='justify-evenly flex-wrap mx-auto gap-4 h-auto w-[650px] my-44'>
+          <h1>Detail to dentist ID: {dataState.dentist.id} </h1>
+          <div className="flex justify-around flex-wrap gap-4">         
               <img src='/images/doctor.jpg' alt="doctor" style={{display:'block', borderRadius: '100px',width:'250px'}} />
-              <div style={{display:'grid'}}>
+              <div className='flex flex-col justify-around mb-4' >
                   <h3>Name: {dataState.dentist.name}</h3>
-                  <h4>Email: {dataState.dentist.email}</h4>
-                  <h4>Phone: {dataState.dentist.phone}</h4>
-                  <h4>Website: {dataState.dentist.website}</h4>
+                  <h3>Email: {dataState.dentist.email}</h3>
+                  <h3>Phone: {dataState.dentist.phone}</h3>
+                  <h3>Website: {dataState.dentist.website}</h3>
               </div>            
-          </div>          
+          </div>     
       </div>
     </>
   )
