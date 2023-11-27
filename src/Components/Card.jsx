@@ -47,13 +47,12 @@ const Card = ({ name, username, id, toggle}) => {
           <img
             className="w-full rounded-t-2xl"
             src="/images/doctor.jpg"
-            alt="doctor"
-            style={{ display: "block" }}
+            alt="doctor"            
           />
           <div className="p-2">
             <h3>{name}</h3>
             <h3>{username}</h3>
-            <h3>ID:{id}</h3>
+            <h3>{`ID: ${id}`}</h3>
           </div>
           {/* <h3>estado: {toggle}</h3> */}
         </div>

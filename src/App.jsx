@@ -7,7 +7,6 @@ import Favs from "./Routes/Favs";
 import Contact from "./Routes/Contact";
 import Detail from "./Routes/Detail";
 import PageNotFound from "./Routes/PageNotFound";
-import Pagination from "./Components/Pagination";
 
 
 function App() {
@@ -25,8 +24,7 @@ function App() {
             <Route path="/*" element={<PageNotFound />} />
           </Routes>
           
-          {/* <Pagination defaultCurrent={1} total={30} /> */}
-          <Pagination/>
+          {/* <Pagination defaultCurrent={1} total={30} /> */}          
         <Footer/>
       </div>
   );

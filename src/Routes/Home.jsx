@@ -2,7 +2,7 @@
 // import Card from '../Components/Card'
 import { useGlobalContext } from '../Components/utils/global.context'
 import Card from '../Components/Card'
-
+import Pagination from '../Components/Pagination'
 
 // import { Link } from 'react-router-dom'
 //Este componente debera ser estilado como "dark" o "light" dependiendo del theme del Context
@@ -13,7 +13,7 @@ const Home = () => {
   
   return (
     <main className={dataState.theme ? "light" : "dark"}>
-      <div className="mt-[60px] py-4 ">
+      <div className="mt-[68px] py-4 ">
         <h3> (click on the card to see details)</h3>
 
         <div className="grid justify-center sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 flex-wrap h-auto max-w-7xl mx-auto text-center">
@@ -30,6 +30,7 @@ const Home = () => {
           ))}
         </div>
       </div>
+      <Pagination />
     </main>
   );
 

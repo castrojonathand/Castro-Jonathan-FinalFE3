@@ -47,7 +47,7 @@ const Navbar = () => {
         </div>
       </div>
 
-      <button onClick={changeTheme} className='mr-4 text-xl bg-white rounded-xl p-2'>{dataState.theme? "Dark theme": "Light theme"}
+      <button onClick={changeTheme} className='mr-4 text-lg bg-white rounded-xl p-2 m-1'>{dataState.theme? "Dark theme": "Light theme"}
         </button>     
     </nav>
     
