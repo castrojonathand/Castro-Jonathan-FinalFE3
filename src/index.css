@@ -13,6 +13,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
@@ -74,6 +75,7 @@ button:hover {
 
 footer {
   background-color: rgb(6 182 212);  
+  width:100vw;
   
 }
 
@@ -155,7 +157,7 @@ table {
   
 }
 
- td, th {
+td, th {
   border: 1px solid #dddddd;
   text-align: left;
   padding: 8px;

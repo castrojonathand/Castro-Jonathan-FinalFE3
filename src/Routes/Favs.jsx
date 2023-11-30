@@ -19,7 +19,7 @@ const Favs = () => {
   return (
     <>
       <div className={dataState.theme ? "light" : "dark"}>
-        <div className="mt-[68px] py-4">
+        <div className="mt-[68px] py-4 h-[1390px]">
           <h1>Dentists Favs</h1>          
           <div className="grid justify-center sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 flex-wrap h-auto max-w-7xl mx-auto text-center">
             {dataState.favs.map((fav) => (
