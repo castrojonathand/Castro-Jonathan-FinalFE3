@@ -2,11 +2,7 @@ import { useEffect } from "react";
 import Card from "../Components/Card";
 import { useGlobalContext } from "../Components/utils/global.context";
 
-//Este componente debera ser estilado como "dark" o "light" dependiendo del theme del Context
-
 const Favs = () => {  
-  // eslint-disable-next-line no-lone-blocks
-  {/* este componente debe consumir los destacados del localStorage */}
   
   const { dataState, dataDispatch } = useGlobalContext();
   

@@ -1,20 +1,14 @@
 import { useGlobalContext } from "../Components/utils/global.context";
 import Card from "../Components/Card";
 import Pagination from "../Components/Pagination";
-import { useEffect } from "react";
 
 const Home = () => {
   const { dataState, dataDispatch } = useGlobalContext();
 
-  useEffect(() => {
-    const storedFavs = JSON.parse(localStorage.getItem("favs")) || [];
-    dataDispatch({ type: "ADD_FAV", payload: storedFavs });
-  }, [dataDispatch]);
-
   const handleRemoveFav = (id) => {
     const updatedFavs = dataState.favs.filter((fav) => fav.id !== id);
     localStorage.setItem("favs", JSON.stringify(updatedFavs));
-    // dataDispatch({ type: "ADD_FAV", payload: updatedFavs });
+    dataDispatch({ type: "ADD_FAV", payload: updatedFavs }); // Actualizar el estado con los favoritos actualizados
   };
 
   return (
@@ -29,8 +23,8 @@ const Home = () => {
                 name={list.name}
                 username={list.username}
                 id={list.id}
-                // favToggle={dataState.fav}
-                onRemoveFav={() => handleRemoveFav(list.id)}// Pasar una función para eliminar un favorito específico
+                favToggle={list.toggle}
+                onRemoveFav={()=> handleRemoveFav} // Pasar una función para eliminar un favorito específico
               />
             </div>
           ))}

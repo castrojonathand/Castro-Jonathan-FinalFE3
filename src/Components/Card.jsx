@@ -1,13 +1,8 @@
-
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
 const Card = ({ name, username, id, favToggle, onRemoveFav }) => {
-
   const [toggle, setToggle] = useState(favToggle);
-  
-  console.log("Apenas entra en CARD", toggle);
-
 
   useEffect(() => {
     const favorites = JSON.parse(localStorage.getItem("favs")) || [];
@@ -15,31 +10,22 @@ const Card = ({ name, username, id, favToggle, onRemoveFav }) => {
     setToggle(exists);
   }, [id]);
 
-  
-  const handleAddFav = () => {
-    setToggle(!toggle);    
-    
-    const item = { name, username, id, toggle };
-
-    console.log(item.toggle);
-
+  const handleFavToggle = () => {
     const favorites = JSON.parse(localStorage.getItem("favs")) || [];
-
     const exists = favorites.some((favorite) => favorite.id === id);
-
+    onRemoveFav(id);
     if (!exists) {
+      const item = { name, username, id, toggle: !toggle };
       favorites.push(item);
-      setToggle(!toggle);
-
+      setToggle(true);
       localStorage.setItem("favs", JSON.stringify(favorites));
-      console.log("favoritos", favorites);
       console.log("Elemento agregado a favoritos:", item);
     } else {
-      setToggle(!toggle);
       const quitFav = favorites.filter((favoritos) => favoritos.id !== id);
-      console.log("quitFav: ", quitFav);
+      setToggle(false);
       localStorage.setItem("favs", JSON.stringify(quitFav));
-      console.log("El elemento se quito de favoritos:", item);
+      
+      console.log("El elemento se quitó de favoritos:", id);
     }
   };
 
@@ -61,12 +47,13 @@ const Card = ({ name, username, id, favToggle, onRemoveFav }) => {
         </div>
       </Link>
       <button
-        onClick={toggle ? onRemoveFav : handleAddFav}
+        onClick={handleFavToggle}
         className=" bg-sky-600 bg-opacity-25 p-4 border-none w-60 cursor-pointer rounded-b-lg text-base min-w-full"
       >
         {toggle ? "Remove Favs" : "Add Favs"}
-      </button>      
+      </button>
     </div>
   );
 };
+
 export default Card;
