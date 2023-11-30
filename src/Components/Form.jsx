@@ -25,8 +25,7 @@ const Form = () => {
   }
   return (
     <div className="m-4 p-4">
-      <form onSubmit={handleSubmit}>
-        {/* <p style={{margin:'5px'}}>validacion: </p> */}
+      <form onSubmit={handleSubmit}>        
         <span>Condiciones:</span>
         <ul className="m-4 text-start">
           <li>* nombre: mayor a 3 caracteres</li>

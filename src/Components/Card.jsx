@@ -42,8 +42,8 @@ const Card = ({ name, username, id, favToggle, onRemoveFav }) => {
             <h3>{name}</h3>
             <h3>{username}</h3>
             <h3>{`ID: ${id}`}</h3>
-          </div>
-          {/* <h3>estado: {toggle}</h3> */}
+          </div>         
+          
         </div>
       </Link>
       <button

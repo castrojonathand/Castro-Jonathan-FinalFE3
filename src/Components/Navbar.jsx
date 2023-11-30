@@ -17,10 +17,7 @@ const Navbar = () => {
   }
   return (
     <nav className={dataState.theme ? "navbar" : "dark"}>
-      <div id="nav" className="flex justify-between items-center gap-4 w-full m-0">
-        {/* Aqui deberan agregar los liks correspondientes a las rutas definidas */}
-        {/* <link to="/"  */}
-        {/* Deberan implementar ademas la logica para cambiar de Theme con el button */}
+      <div id="nav" className="flex justify-between items-center gap-4 w-full m-0">        
         <div className="navigate">
           <button className="buttonNav" onClick={() => navigate(-1)}>
             {" "}

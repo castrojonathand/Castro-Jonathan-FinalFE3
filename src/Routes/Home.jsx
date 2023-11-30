@@ -8,7 +8,7 @@ const Home = () => {
   const handleRemoveFav = (id) => {
     const updatedFavs = dataState.favs.filter((fav) => fav.id !== id);
     localStorage.setItem("favs", JSON.stringify(updatedFavs));
-    dataDispatch({ type: "ADD_FAV", payload: updatedFavs }); // Actualizar el estado con los favoritos actualizados
+    dataDispatch({ type: "ADD_FAV", payload: updatedFavs }); 
   };
 
   return (
@@ -24,7 +24,7 @@ const Home = () => {
                 username={list.username}
                 id={list.id}
                 favToggle={list.toggle}
-                onRemoveFav={()=> handleRemoveFav} // Pasar una función para eliminar un favorito específico
+                onRemoveFav={()=> handleRemoveFav}
               />
             </div>
           ))}

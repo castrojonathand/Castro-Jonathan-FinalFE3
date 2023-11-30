@@ -31,7 +31,7 @@ const dataReducer = (state,action) =>{
 }
 
 const Context = ({ children }) => {
-  //Aqui deberan implementar la logica propia del Context, utilizando el hook useMemo
+  
     const [dataState, dataDispatch] = useReducer(dataReducer,initialState);
 
     const urlList = 'https://jsonplaceholder.typicode.com/users'
@@ -43,11 +43,7 @@ const Context = ({ children }) => {
 
     },[]) 
     console.log(dataState)
-        
-    // dataState.favs = JSON.parse(localStorage.getItem("favs")) || [];
-    
-  
-    return (
+      return (
       <GlobalContext.Provider value={{
         dataState,
         dataDispatch
