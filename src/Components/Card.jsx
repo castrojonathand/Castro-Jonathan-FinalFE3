@@ -1,45 +1,51 @@
-// import React, { useEffect } from "react";
-// import { useEffect } from "react";
+
+import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-// import { useContextGlobal } from "./utils/global.context";
 
+const Card = ({ name, username, id, favToggle, onRemoveFav }) => {
 
-const Card = ({ name, username, id, toggle}) => {
+  const [toggle, setToggle] = useState(favToggle);
   
-
-  console.log("Apenas entra en CARD",toggle)
-
-  const AddFav = ()=>{
-    // Aqui iria la logica para agregar la Card en el localStorage   
+  console.log("Apenas entra en CARD", toggle);
+  // useEffect(() => {
+  //   setToggle(favToggle);
     
-        console.log(toggle," apenas entra en AddFav [CARD]");       
-        
-        const item = { name, username, id, toggle }  
-        
-        console.log(item.toggle)
+  // }, [favToggle]);
 
-        const favorites = JSON.parse(localStorage.getItem("favs")) || []
-        
-        const exists = favorites.some((favorite) => favorite.id === id)
+  useEffect(() => {
+    const favorites = JSON.parse(localStorage.getItem("favs")) || [];
+    const exists = favorites.some((favorite) => favorite.id === id);
+    setToggle(exists);
+  }, [id]);
 
-        if (!exists) {
-              
-          favorites.push(item);
-          toggle = true     
-          
-          localStorage.setItem("favs", JSON.stringify(favorites))          
-          console.log("favoritos", favorites) ;
-          console.log("Elemento agregado a favoritos:", item)
-        } else {
-          toggle = false 
-          const quitFav = favorites.filter(favoritos => favoritos.id !== id)
-          console.log("quitFav: ",quitFav)
-          localStorage.setItem("favs", JSON.stringify(quitFav))      
-          console.log("El elemento se quito de favoritos:", item)
-          } 
-      }
   
-      
+  const handleAddFav = () => {
+    setToggle(!toggle);    
+    
+    const item = { name, username, id, toggle };
+
+    console.log(item.toggle);
+
+    const favorites = JSON.parse(localStorage.getItem("favs")) || [];
+
+    const exists = favorites.some((favorite) => favorite.id === id);
+
+    if (!exists) {
+      favorites.push(item);
+      setToggle(!toggle);
+
+      localStorage.setItem("favs", JSON.stringify(favorites));
+      console.log("favoritos", favorites);
+      console.log("Elemento agregado a favoritos:", item);
+    } else {
+      setToggle(!toggle);
+      const quitFav = favorites.filter((favoritos) => favoritos.id !== id);
+      console.log("quitFav: ", quitFav);
+      localStorage.setItem("favs", JSON.stringify(quitFav));
+      console.log("El elemento se quito de favoritos:", item);
+    }
+  };
+
   return (
     <div className="min-w-min border border-black rounded-2xl">
       <Link to={`/home/dentist/${id}`}>
@@ -47,7 +53,7 @@ const Card = ({ name, username, id, toggle}) => {
           <img
             className="w-full rounded-t-2xl"
             src="/images/doctor.jpg"
-            alt="doctor"            
+            alt="doctor"
           />
           <div className="p-2">
             <h3>{name}</h3>
@@ -58,13 +64,11 @@ const Card = ({ name, username, id, toggle}) => {
         </div>
       </Link>
       <button
-        onClick={() => AddFav()}
+        onClick={toggle ? onRemoveFav : handleAddFav}
         className=" bg-sky-600 bg-opacity-25 p-4 border-none w-60 cursor-pointer rounded-b-lg text-base min-w-full"
       >
-        {toggle ? "Add to favorites" : "Remove from favorites"}
-      </button>
-      {/* No debes olvidar que la Card a su vez servira como Link hacia la pagina de detalle */}
-      {/* Ademas deberan integrar la logica para guardar cada Card en el localStorage */}
+        {toggle ? "Remove Favs" : "Add Favs"}
+      </button>      
     </div>
   );
 };

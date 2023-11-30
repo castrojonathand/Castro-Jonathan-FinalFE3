@@ -8,14 +8,18 @@ const Favs = () => {
   // eslint-disable-next-line no-lone-blocks
   {/* este componente debe consumir los destacados del localStorage */}
   
-  const {dataState, dataDispatch}=useGlobalContext()
-  useEffect(() =>{
-    console.log("Local Favs ",dataState.favs)
-    dataDispatch({type:'ADD_FAV', payload: dataState.favs})   
-    dataState.favs = JSON.parse(localStorage.getItem("favs"));    
-    
-    },[dataState.favs]) 
-    
+  const { dataState, dataDispatch } = useGlobalContext();
+  
+    useEffect(() => {
+      const storedFavs = JSON.parse(localStorage.getItem("favs")) || [];
+      dataDispatch({ type: "ADD_FAV", payload: storedFavs });
+    }, [dataDispatch]);
+
+    const handleRemoveFav = (id) => {
+      const updatedFavs = dataState.favs.filter((fav) => fav.id !== id);
+      localStorage.setItem("favs", JSON.stringify(updatedFavs));
+      dataDispatch({ type: "ADD_FAV", payload: updatedFavs });
+    };
   return (
     <>
       <div className={dataState.theme ? "light" : "dark"}>
@@ -29,7 +33,8 @@ const Favs = () => {
                   name={fav.name}
                   username={fav.username}
                   id={fav.id}
-                  toogle={fav.toggle}
+                  favToggle={fav.toggle}
+                  onRemoveFav={() => handleRemoveFav(fav.id)}
                 />
               </div>
             ))}

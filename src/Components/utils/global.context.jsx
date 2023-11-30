@@ -44,7 +44,7 @@ const Context = ({ children }) => {
     },[]) 
     console.log(dataState)
         
-    dataState.favs = JSON.parse(localStorage.getItem("favs")) || [];
+    // dataState.favs = JSON.parse(localStorage.getItem("favs")) || [];
     
   
     return (
