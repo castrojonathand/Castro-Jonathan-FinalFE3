@@ -7,10 +7,7 @@ const Card = ({ name, username, id, favToggle, onRemoveFav }) => {
   const [toggle, setToggle] = useState(favToggle);
   
   console.log("Apenas entra en CARD", toggle);
-  // useEffect(() => {
-  //   setToggle(favToggle);
-    
-  // }, [favToggle]);
+
 
   useEffect(() => {
     const favorites = JSON.parse(localStorage.getItem("favs")) || [];
