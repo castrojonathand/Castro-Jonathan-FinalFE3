@@ -13,7 +13,7 @@ export const Pagination = ({
   console.log("cardsPerPagePAGINATION>>", cardsPerPage);
   console.log("currentPagePAGINATION>>", currentPage);
 
-  const maxPagesToShow = 1;
+  const maxPagesToShow = 1; // esta constante decide cuantas paginas se renderizaran antes y despues de la pagina seleccionada, ajuste la constante a sus necesidades o conveniencia.
 
   let startPage = Math.max(currentPage - maxPagesToShow, 1);
 
@@ -47,10 +47,10 @@ export const Pagination = ({
           onClick={Back}
           className={
             dataState.theme
-              ? `h-12 border-2 border-r-0 border-primary px-4 rounded-l-lg hover:bg-primary hover:opacity-60 hover:text-white ${
+              ? `h-12 border-2 border-r-0  px-4 rounded-l-lg border-primary hover:bg-primary hover:opacity-60 hover:text-white ${
                   currentPage === 1 ? "cursor-not-allowed opacity-30" : ""
                 }`
-              : `h-12 border-2 border-r-0 border-black px-4 rounded-l-lg hover:bg-gray-600 hover:opacity-60 ${
+              : `h-12 border-2 border-r-0 border-black px-4 rounded-l-lg hover:bg-gray-600 hover:opacity-80 hover:text-black ${
                   currentPage === 1 ? "border-black cursor-not-allowed" : ""
                 }`
           }
@@ -68,13 +68,15 @@ export const Pagination = ({
           <button
             key={i}
             onClick={() => setCurrentPage(pg)}
+            id="pageNumber"
             className={
               dataState.theme
-                ? `h-12 border-2 border-r-0 border-primary w-12 hover:bg-primary hover:opacity-60 hover:text-white ${
+                ? `h-12 w-12 border-2 border-r-0 border-primary hover:bg-primary hover:opacity-60 hover:text-white ${
                     currentPage === pg && "bg-primary"
                   }`
-                : `h-12 border-2 border-r-0 border-black w-12 hover:bg-gray-600 hover:opacity-60 ${
-                    currentPage === pg && "bg-black"
+                : `h-12 w-12 border-2 border-r-0 border-black hover:bg-gray-600 hover:opacity-80 hover:text-black ${
+                    currentPage === pg &&
+                    "!bg-black opacity-95 border-r-2 hover:text-white"
                   }`
             }
           >
@@ -86,12 +88,12 @@ export const Pagination = ({
           onClick={Next}
           className={
             dataState.theme
-              ? `h-12 border-2 border-primary px-4 rounded-r-lg hover:bg-primary hover:opacity-60 hover:text-white ${
+              ? `h-12 border-2 px-4 rounded-r-lg border-primary hover:bg-primary hover:opacity-60 hover:text-white ${
                   currentPage >= totalPages
                     ? "border-black cursor-not-allowed opacity-30 border-l-0"
                     : ""
                 }`
-              : `h-12 border-2  px-4 rounded-r-lg border-black hover:bg-gray-600 hover:opacity-60 ${
+              : `h-12 border-2  px-4 rounded-r-lg border-black hover:bg-gray-600 hover:opacity-80 hover:text-black ${
                   currentPage >= totalPages
                     ? "border-black cursor-not-allowed border-l-2 hover:bg-black"
                     : ""

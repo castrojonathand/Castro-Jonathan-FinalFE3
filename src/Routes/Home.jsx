@@ -8,7 +8,7 @@ const Home = () => {
   const { dataState, dataDispatch } = useGlobalContext();
   // const path = usePathname()
 
-  const CARDS_PER_PAGE = 3;
+  const CARDS_PER_PAGE = 4;
   const totalCards = dataState.listData.length;
   console.log("dataState.listData.length>>>", dataState.listData.length);
   // eslint-disable-next-line no-unused-vars
@@ -31,7 +31,7 @@ const Home = () => {
       <div className="mt-[68px] py-4">
         <h3> (click on the card to see details)</h3>
 
-        <div className="grid justify-center sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 h-auto max-w-7xl mx-auto text-center">
+        <div className="grid justify-center sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 h-auto max-w-7xl mx-auto my-14 text-center">
           {dataState.listData
             .map((list) => (
               <div

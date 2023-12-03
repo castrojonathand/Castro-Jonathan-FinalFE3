@@ -27,7 +27,7 @@ const Navbar = () => {
           <img src="/images/DH.png" alt="DH-logo" />
         </div>
 
-        <div className={`link ${isOpen && "open"}`}>
+        <div className={`link ${isOpen ? "open" : "close"}`}>
           <Link to="/home" onClick={() => setIsOpen(!isOpen)}>
             {" "}
             <h3>Home</h3>
