@@ -79,15 +79,6 @@ footer {
   
 }
 
-/* footer > img{
-  width: 200px;
-  margin: 0;
-}
-footer > p{
-  margin: 0;
-  padding-top: 0.5rem;
-} */
-
 form{
   display: flex;
   flex-direction: column;
@@ -99,37 +90,11 @@ form{
   border-radius: 25px;
 }
 
-/* .img {
-  width: 250px;  
-  border-radius: 15px 15px 0px 0px;
-} */
-
-/* .detailCard{
-
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1rem;
-  width: 45vw;
-  justify-content: inherit;  
-  
-} */
-
-
-
 .card:hover{
   box-shadow: rgba(0, 0, 0, 0.25) 0px 0px 25px 5px;
   border: 0.5px solid rgb(5, 5, 0);
 }
 
-/* .card-grid{  
-  display: flex;
-  justify-content: space-evenly;
-  gap: 1rem;
-  width: 65vw;
-  height: auto;
-  flex-wrap: wrap;
-  margin: 0 auto;
-} */
 
 .buttonNav{
   font-size: 17px;  
@@ -176,13 +141,10 @@ tr:nth-child(even) {
   
 }
 
-.dark #pagination{
-  background-color: #87949800;
-}
-
 .dark .card{
   background-color: #87949854;
   color: white;
+  height: 100vh;
 }
 .dark a {
   color: white;
