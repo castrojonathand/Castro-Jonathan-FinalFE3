@@ -166,11 +166,14 @@ tr:nth-child(even) {
 
 @media (max-width: 768px) {
 
-      .dark.link{
-      background-color: #030000ae;
-      color: white;
+    .App{
+      height: max-content;
+    }
+    .dark.link{
+    background-color: #030000ae;
+    color: white;
       
-      }
+    }
     .link{
       position: absolute;
       top:60px;
