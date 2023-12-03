@@ -14,8 +14,6 @@ const Home = () => {
   // eslint-disable-next-line no-unused-vars
   const [cardsPerPage, setCardsPerPage] = useState(CARDS_PER_PAGE);
   const [currentPage, setCurrentPage] = useState(1);
-  console.log("CardsPerPage>>>", cardsPerPage);
-  console.log("currentPage>>>", currentPage);
   
   const lastIndex = currentPage * cardsPerPage;
   const firstIndex = lastIndex - cardsPerPage;

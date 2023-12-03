@@ -9,10 +9,6 @@ export const Pagination = ({
   const { dataState} = useGlobalContext();
   const totalPages = Math.ceil(totalCards / cardsPerPage);
 
-  console.log("totalCardsPAGINATION>>", totalCards);
-  console.log("cardsPerPagePAGINATION>>", cardsPerPage);
-  console.log("currentPagePAGINATION>>", currentPage);
-
   const maxPagesToShow = 1; // esta constante decide cuantas paginas se renderizaran antes y despues de la pagina seleccionada, ajuste la constante a sus necesidades o conveniencia.
 
   let startPage = Math.max(currentPage - maxPagesToShow, 1);
