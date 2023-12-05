@@ -1,13 +1,13 @@
 import { useGlobalContext } from "../Components/utils/global.context";
 import Card from "../Components/Card";
 import { Pagination } from "../Components/Pagination";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 // import { usePathname} from 'next/navigation'
 
 const Home = () => {
   const { dataState, dataDispatch } = useGlobalContext();
   // const path = usePathname()
-  const [screenHeight, setScreenHeight] = useState(window.innerHeight);
+  
   const CARDS_PER_PAGE = 4;
   const totalCards = dataState.listData.length;
   // eslint-disable-next-line no-unused-vars
@@ -17,31 +17,21 @@ const Home = () => {
   const lastIndex = currentPage * cardsPerPage;
   const firstIndex = lastIndex - cardsPerPage;
 
-  useEffect(() => {
-    const handleResize = () => {
-      setScreenHeight(window.innerHeight);
-    };
-
-    window.addEventListener("resize", handleResize);
-    return () => {
-      window.removeEventListener("resize", handleResize);
-    };
-  }, []);
+  
 
   const handleRemoveFav = (id) => {
     const updatedFavs = dataState.favs.filter((fav) => fav.id !== id);
     localStorage.setItem("favs", JSON.stringify(updatedFavs));
     dataDispatch({ type: "ADD_FAV", payload: updatedFavs }); 
   };
-  console.log("screenHeight>>",screenHeight)
+  
 
 
-  return (
-    <main className={`h-${screenHeight} ${dataState.theme ? "" : "dark"}`}>
+  return (    
       <div className="mt-[68px] py-4">
         <h3> (click on the card to see details)</h3>
 
-        <div className="grid justify-center sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 h-auto max-w-7xl mx-auto my-14 text-center">
+        <div className="grid justify-center sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2 h-auto max-w-7xl mx-auto my-14 text-center">
           {dataState.listData
             .map((list) => (
               <div
@@ -65,8 +55,7 @@ const Home = () => {
           setCurrentPage={setCurrentPage}
           totalCards={totalCards}
         />
-      </div>
-    </main>
+      </div>    
   );
 };
 
