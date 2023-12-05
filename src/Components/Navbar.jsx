@@ -15,7 +15,10 @@ const Navbar = () => {
   }
   return (
     <nav className={dataState.theme ? "navbar" : "dark"}>
-      <div id="nav" className="flex justify-between items-center gap-4 w-full m-0">        
+      <div
+        id="nav"
+        className="flex justify-between items-center gap-4 w-full m-0"
+      >
         <div className="navigate">
           <button className="buttonNav" onClick={() => navigate(-1)}>
             {" "}
@@ -30,15 +33,15 @@ const Navbar = () => {
         <div className={`link ${isOpen ? "open" : "close"}`}>
           <Link to="/home" onClick={() => setIsOpen(!isOpen)}>
             {" "}
-            <h3>Home</h3>
+            <h3 className="border-b-2">Home</h3>
           </Link>
           <Link to="/contact" onClick={() => setIsOpen(!isOpen)}>
             {" "}
-            <h3>Contact</h3>
+            <h3 className="border-b-2">Contact</h3>
           </Link>
           <Link to="/favs" onClick={() => setIsOpen(!isOpen)}>
             {" "}
-            <h3>Favs</h3>
+            <h3 className="border-b-2">Favs</h3>
           </Link>
         </div>
 

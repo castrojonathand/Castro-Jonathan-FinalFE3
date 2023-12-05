@@ -187,18 +187,22 @@ tr:nth-child(even) {
       height: 120px;      
       /* border: solid 3px #4f9cad; */
     }  
-
-    .link.open{      
-      transform: translateX(0) !important;
-      transition: 0.3s ease all;
-    }
     .link.close{
-      transform: translateX(-104%) !important;
+      transform: translateX(-104%);
       transition: 0.3s ease all;
     }
-
+    .link.open{
+      transform: translateX(0);
+      transition: 0.3s ease all;
+      display: flex;
+      justify-content: center;
+      border-bottom: solid 2px;
+    }
+    .dark .link.open {
+      margin-left: 8px;
+    }
     .hamburg span{
-      display: flex;      
+      display: flex;
       width: 30px;
       height: 4px;
       background: white;

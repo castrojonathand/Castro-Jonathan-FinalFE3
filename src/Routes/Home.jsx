@@ -10,7 +10,6 @@ const Home = () => {
 
   const CARDS_PER_PAGE = 4;
   const totalCards = dataState.listData.length;
-  console.log("dataState.listData.length>>>", dataState.listData.length);
   // eslint-disable-next-line no-unused-vars
   const [cardsPerPage, setCardsPerPage] = useState(CARDS_PER_PAGE);
   const [currentPage, setCurrentPage] = useState(1);

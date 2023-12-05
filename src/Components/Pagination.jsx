@@ -35,7 +35,6 @@ export const Pagination = ({
   function Back() {
     setCurrentPage(currentPage - 1);
   }
- console.log("pageNumber>>>", pageNumber);
   return (
     <div className="flex flex-col justify-center items-center">
       <div className="bg-white rounded-lg font-[Poppins] flex items-center">
