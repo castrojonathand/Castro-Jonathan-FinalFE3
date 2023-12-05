@@ -12,8 +12,9 @@ import PageNotFound from "./Routes/PageNotFound";
 function App() {
 
   return (
-    <div className="App">        
+    <div>        
         <Navbar/> 
+        <div>
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/index.html" element={<Home />} />
@@ -23,8 +24,7 @@ function App() {
             <Route path="/favs" element={<Favs />} />
             <Route path="/*" element={<PageNotFound />} />
           </Routes>
-          
-          {/* <Pagination defaultCurrent={1} total={30} /> */}          
+        </div>                 
         <Footer/>
       </div>
   );

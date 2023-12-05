@@ -1,13 +1,13 @@
 import { useGlobalContext } from "../Components/utils/global.context";
 import Card from "../Components/Card";
 import { Pagination } from "../Components/Pagination";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 // import { usePathname} from 'next/navigation'
 
 const Home = () => {
   const { dataState, dataDispatch } = useGlobalContext();
   // const path = usePathname()
-
+  const [screenHeight, setScreenHeight] = useState(window.innerHeight);
   const CARDS_PER_PAGE = 4;
   const totalCards = dataState.listData.length;
   // eslint-disable-next-line no-unused-vars
@@ -17,14 +17,27 @@ const Home = () => {
   const lastIndex = currentPage * cardsPerPage;
   const firstIndex = lastIndex - cardsPerPage;
 
+  useEffect(() => {
+    const handleResize = () => {
+      setScreenHeight(window.innerHeight);
+    };
+
+    window.addEventListener("resize", handleResize);
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
   const handleRemoveFav = (id) => {
     const updatedFavs = dataState.favs.filter((fav) => fav.id !== id);
     localStorage.setItem("favs", JSON.stringify(updatedFavs));
     dataDispatch({ type: "ADD_FAV", payload: updatedFavs }); 
   };
+  console.log("screenHeight>>",screenHeight)
+
 
   return (
-    <main className={ `h-screen ${dataState.theme ? "" : "dark"}`}>
+    <main className={`h-${screenHeight} ${dataState.theme ? "" : "dark"}`}>
       <div className="mt-[68px] py-4">
         <h3> (click on the card to see details)</h3>
 

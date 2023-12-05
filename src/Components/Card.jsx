@@ -19,13 +19,11 @@ const Card = ({ name, username, id, favToggle, onRemoveFav }) => {
       favorites.push(item);
       setToggle(true);
       localStorage.setItem("favs", JSON.stringify(favorites));
-      console.log("Elemento agregado a favoritos:", item);
+      
     } else {
       const quitFav = favorites.filter((favoritos) => favoritos.id !== id);
       setToggle(false);
-      localStorage.setItem("favs", JSON.stringify(quitFav));
-      
-      console.log("El elemento se quitó de favoritos:", id);
+      localStorage.setItem("favs", JSON.stringify(quitFav))
     }
   };
 
