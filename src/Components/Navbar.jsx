@@ -28,21 +28,33 @@ const Navbar = () => {
             <ArrowRightOutlined />
           </button> */}
           <Me />
-          <div className="flex mx-3">
-            <img
-              className="w-10 h-10 bg-white rounded-full"
-              src="/images/github-mark.png"
-              alt=""
-            />
-            <img
-              className="w-10 h-10 ml-2 bg-white rounded"              
-              src="/images/linkedin.png"
-              alt=""
-            />
+          <div className="flex mx-4 gap-4">
+            <a
+              href="https://github.com/castrojonathand"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img
+                className="w-10 h-10 bg-white rounded-full"
+                src="/images/github-mark.png"
+                alt="GitHub"
+              />
+            </a>
+            <a
+              href="https://www.linkedin.com/in/jonathan-castro-/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img
+                className="w-10 h-10 bg-white rounded"
+                src="/images/linkedin.png"
+                alt="LinkedIn"
+              />
+            </a>
           </div>
         </div>
 
-        <div className={`link ${isOpen ? "open" : "close"} text-center mr-16`}>
+        <div className={`link ${isOpen ? "open" : "close"} text-center mr-20`}>
           <Link to="/home" onClick={() => setIsOpen(!isOpen)}>
             <h3 className="relative inline-block cursor-pointer">
               Home
