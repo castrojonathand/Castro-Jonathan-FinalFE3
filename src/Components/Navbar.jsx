@@ -27,21 +27,35 @@ const Navbar = () => {
           <button className="buttonNav" onClick={() => navigate(1)}>
             <ArrowRightOutlined />
           </button>
-          <Me/>
+          <Me />
+          <div className="flex mx-3">
+            <img
+              className="w-10 h-10 bg-white rounded-full"
+              src="/images/github-mark.png"
+              alt=""
+            />
+            <img
+              className="w-10 h-10 ml-2 bg-white rounded"              
+              src="/images/linkedin.png"
+              alt=""
+            />
+          </div>
         </div>
 
         <div className={`link ${isOpen ? "open" : "close"} text-center`}>
           <Link to="/home" onClick={() => setIsOpen(!isOpen)}>
             <h3 className="relative inline-block cursor-pointer">
               Home
-              <span className="absolute inset-x-0 bottom-0 h-0.5 bg-black w-full transform origin-left transition-all duration-500 scale-x-0"></span>
+              <span
+                className={`absolute inset-x-0 scale-x-0 bottom-0 h-0.5 bg-white w-full transform origin-left transition hover:duration-300 hover:scale-125`}
+              ></span>
             </h3>
           </Link>
           <Link to="/contact" onClick={() => setIsOpen(!isOpen)}>
-            <h3 className="border-b-2">Contact</h3>
+            <h3 className="">Contact</h3>
           </Link>
           <Link to="/favs" onClick={() => setIsOpen(!isOpen)}>
-            <h3 className="border-b-2">Favs</h3>
+            <h3 className="">Favs</h3>
           </Link>
         </div>
 
@@ -55,7 +69,7 @@ const Navbar = () => {
             <span></span>
           </div>
           <div className="flex justify-between gap-2">
-            <Me/>
+            <Me />
             {/* <img className="h-10 w-14" src="/images/linkedin-ico.png" alt="" /> */}
           </div>
         </div>

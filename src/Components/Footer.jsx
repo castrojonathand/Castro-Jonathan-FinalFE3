@@ -1,6 +1,6 @@
 import React from 'react'
 import { useGlobalContext } from './utils/global.context'
-import Me from './Me';
+// import Me from './Me';
 
 const Footer = () => {
   const {dataState}= useGlobalContext()
@@ -8,7 +8,7 @@ const Footer = () => {
     <footer className={dataState.theme ? "" : "dark"}>
       <div className="flex justify-center p-4 bg-primary">
         <p className='pt-0.5'>Powered by</p>
-        <Me/>
+        {/* <Me/> */}
       </div>
     </footer>
   );
