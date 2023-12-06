@@ -1,15 +1,15 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
-import { useNavigate } from 'react-router-dom'
 import { useGlobalContext } from './utils/global.context'
-import { ArrowLeftOutlined, ArrowRightOutlined } from '@ant-design/icons';
 import Me from './Me';
+// import { useNavigate } from 'react-router-dom'
+// import { ArrowLeftOutlined, ArrowRightOutlined } from '@ant-design/icons';
 
 const Navbar = () => {
 
   const [isOpen,setIsOpen] = useState(false)
   const {dataState, dataDispatch} = useGlobalContext()
-  const navigate = useNavigate()
+  // const navigate = useNavigate()
 
   const changeTheme=()=>{
     dataDispatch({type: 'CHANGE_THEME', payload: !dataState.theme})
@@ -18,15 +18,15 @@ const Navbar = () => {
     <nav>
       <div
         id="nav"
-        className="flex justify-between items-center gap-4 w-full m-0"
+        className="flex justify-between items-center gap-4 w-full mr-2"
       >
         <div className="navigate">
-          <button className="buttonNav" onClick={() => navigate(-1)}>
+          {/* <button className="buttonNav" onClick={() => navigate(-1)}>
             <ArrowLeftOutlined />
           </button>
           <button className="buttonNav" onClick={() => navigate(1)}>
             <ArrowRightOutlined />
-          </button>
+          </button> */}
           <Me />
           <div className="flex mx-3">
             <img
@@ -42,7 +42,7 @@ const Navbar = () => {
           </div>
         </div>
 
-        <div className={`link ${isOpen ? "open" : "close"} text-center`}>
+        <div className={`link ${isOpen ? "open" : "close"} text-center mr-16`}>
           <Link to="/home" onClick={() => setIsOpen(!isOpen)}>
             <h3 className="relative inline-block cursor-pointer">
               Home
