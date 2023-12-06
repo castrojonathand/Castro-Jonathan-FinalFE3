@@ -41,8 +41,7 @@ const Context = ({ children }) => {
       .then(data=> dataDispatch({type:'GET_LIST', payload:data} ))
       .catch(error => console.log(error))
 
-    },[]) 
-    console.log(dataState)
+    },[])     
       return (
       <GlobalContext.Provider value={{
         dataState,

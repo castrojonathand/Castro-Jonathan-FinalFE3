@@ -10,19 +10,27 @@ const Form = () => {
     error: false   
   })
   const handleSubmit = (e) => {
-    e.preventDefault()    
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
-    const emailValid = emailRegex.test(state.email)
-    
-    if(state.nombre.length >=3 && emailValid) {
+    e.preventDefault();
 
-      setState({...state,message: "Gracias por registrarse", error: false}) 
-      
-    }else{      
-      setState({...state,message: 'por favor verifique la informacion del form', error: true})     
-      
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    const emailValid = emailRegex.test(state.email);
+    const nombreHasNoNumbers = /^[^\d]+$/.test(state.nombre);
+
+    if (state.nombre.length >= 3 && emailValid && nombreHasNoNumbers) {
+      setState({
+        ...state,
+        message: "Gracias por registrarse",
+        error: false,
+      });
+    } else {
+      setState({
+        ...state,
+        message: "Por favor verifique la información del formulario",
+        error: true,
+      });
     }
-  }
+  };
+
   return (
     <div className="m-4 p-4">
       <form onSubmit={handleSubmit}>        
@@ -33,22 +41,22 @@ const Form = () => {
         </ul>      
         <label> Name: </label>
         <input
-          className="border border-gray-700 rounded-md w-full focus:outline-none focus:ring-2"
+          className="p-1 border border-gray-700 rounded-md w-full focus:outline-none focus:ring-2 text-black"
           type="text"
           onBlur={(e) => setState({ ...state, nombre: e.target.value })}
         />
         <br />
         <label> Email: </label>
         <input
-          className="border border-gray-700 rounded-md w-full focus:outline-none focus:ring-2"
+          className="p-1 border border-gray-700 rounded-md w-full focus:outline-none focus:ring-2 text-black"
           type="mail"
           onBlur={(e) => setState({ ...state, email: e.target.value })}
         />
         <br />
 
-        <button className="button">Enviar</button>
-        {state.error && <p style={{ color: "red" }}>{state.message}</p>}
-        {!state.error && <p style={{ color: "green" }}>{state.message}</p>}
+        <button className="bg-primary w-1/3 mx-auto rounded-md my-2">Enviar</button>
+        {state.error && <p className="text-red-500">{state.message}</p>}
+        {!state.error && <p className="text-green-500">{state.message}</p>}
       </form>
     </div>
   );

@@ -31,6 +31,7 @@ const Home = () => {
       <div className="mt-[68px] py-4">
         <h3> (click on the card to see details)</h3>
 
+        
         <div className="grid justify-center sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2 h-auto max-w-7xl mx-auto my-14 text-center">
           {dataState.listData
             .map((list) => (
