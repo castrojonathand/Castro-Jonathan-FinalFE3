@@ -30,7 +30,7 @@ const Navbar = () => {
           <Me />
           <div className="flex mx-4 gap-4">
             <a
-              href="https://github.com/castrojonathand"
+              href="https://github.com/johonnydeev"
               target="_blank"
               rel="noopener noreferrer"
             >
