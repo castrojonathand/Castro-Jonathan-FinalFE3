@@ -28,7 +28,7 @@ const Home = () => {
 
 
   return (    
-      <div className="mt-[68px] py-4">
+      <div className="mt-[75px] py-4">
         <h3> (click on the card to see details)</h3>
 
         

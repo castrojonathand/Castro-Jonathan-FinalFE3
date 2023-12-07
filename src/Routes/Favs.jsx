@@ -19,7 +19,7 @@ const Favs = () => {
     console.log("dataState.favs>>",dataState.favs)
   return (
     <>
-      <div className="mt-[68px] py-4">
+      <div className="mt-[75px] py-4">
         <h1 className="my-4 mx-auto sm:w-[774px] md:w-[px] lg:w-[1324px]">
           Dentists Favs
         </h1>
