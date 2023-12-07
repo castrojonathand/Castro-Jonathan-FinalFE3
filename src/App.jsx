@@ -28,9 +28,8 @@ function App() {
   // console.log("screenHeight>>", screenHeight);
   return (
     <div
-      className={`${
-        dataState.theme ? "" : "dark"
-      } min-h-screen min-w-full flex flex-col justify-between`}
+      className={`${dataState.theme ? "" : "dark"}
+      min-h-screen min-w-full flex flex-col justify-between`}
     >
       <Navbar />
       <div>

@@ -87,6 +87,7 @@ const Navbar = () => {
         </div>
 
         <button
+          id='theme'
           onClick={changeTheme}
           className="mr-4 text-lg bg-white rounded-xl p-2 m-1"
         >
