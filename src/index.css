@@ -219,7 +219,7 @@ tr:nth-child(even) {
     @media (max-width: 473px) {
 
       #theme{
-        padding: 16px;               
+        padding: 4px;               
         font-size: 15px;
         line-height: normal;    
       }
