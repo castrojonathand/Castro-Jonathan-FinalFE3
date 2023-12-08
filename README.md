@@ -2,7 +2,7 @@
 
 Proyecto que consume una API la cual devuelve informacion de 10 dentistas que son renderizados en cartas de presentacion para una mejor visualizacion `bashh`.
 
-## Funcionalidades actuales y futuras  (Funciones a implementar e implementadas)
+## Funcionalidades actuales y futuras
 
 - [x] Responsive
 - [x] Dark mode
@@ -13,7 +13,7 @@ Proyecto que consume una API la cual devuelve informacion de 10 dentistas que so
 
 ## API utilizada: https://jsonplaceholder.typicode.com/users
 
-## Tech Stack  (Stack tecnologico con su respectiva URL)
+## Tech Stack
 
 - **Frontend:** [Vite](https://vitejs.dev/)
 - **BackAPI:** [jsonplaceholder](https://jsonplaceholder.typicode.com/users)
