@@ -1,21 +1,21 @@
-# Proyecto que consume una API la cual devuelve informacion de 10 dentistas que son renderizados en cartas de presentacion para una mejor visualizacion
+# [Card Dentist](https://aws-reactjs-castro-jonathan.s3.amazonaws.com/index.html)
 
-# Aspectos en materia de diseño.
+Proyecto que consume una API la cual devuelve informacion de 10 dentistas que son renderizados en cartas de presentacion para una mejor visualizacion `bashh`.
 
-1- Modo oscuro.
+## Funcionalidades actuales y futuras  (Funciones a implementar e implementadas)
 
-2- Responsive.
+- [x] Responsive
+- [x] Dark mode
+- [x] Paginación
+- [x] Favoritos
+- [ ] Mensajeria con **Nodemailer**
+- [ ] Authentication
 
-3- Navegacion (Botones atras y adelante, PageNotFound).
+## API utilizada: https://jsonplaceholder.typicode.com/users
 
-4- Colorimetria.
+## Tech Stack  (Stack tecnologico con su respectiva URL)
 
-5- Paginacion (En proceso).
+- **Frontend:** [Vite](https://vitejs.dev/)
+- **BackAPI:** [jsonplaceholder](https://jsonplaceholder.typicode.com/users)
+- **Styling:** [Tailwind CSS](https://tailwindcss.com)
 
-7- Depoy en AWS https://aws-reactjs-castro-jonathan.s3.amazonaws.com/index.html
-
-
-#API Users: https://jsonplaceholder.typicode.com/users
-
-
-#API por Parametros: https://jsonplaceholder.typicode.com/users/${id}

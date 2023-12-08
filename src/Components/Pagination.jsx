@@ -46,7 +46,7 @@ export const Pagination = ({
                   currentPage === 1 ? "cursor-not-allowed opacity-30" : ""
                 }`
               : `h-12 border-2 border-r-0 border-black px-4 rounded-l-lg hover:bg-gray-600 hover:opacity-80 hover:text-black ${
-                  currentPage === 1 ? "border-black cursor-not-allowed" : ""
+                  currentPage === 1 ? "cursor-not-allowed opacity-30" : ""
                 }`
           }
           disabled={currentPage === 1}
