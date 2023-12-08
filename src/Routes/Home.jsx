@@ -29,14 +29,12 @@ const Home = () => {
 
   return (    
       <div className="mt-[100px] py-2">
-        <h3> (click on the card to see details)</h3>
-
-        
-        <div className="grid justify-center sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2 h-auto max-w-7xl mx-auto my-14 text-center">
+        <h3> (click on the card to see details)</h3>        
+        <div className="flex flex-wrap justify-center gap-4 h-auto mx-auto my-14 text-center">
           {dataState.listData
             .map((list) => (
               <div
-                className="flex flex-col items-center mx-4 p-4"
+                className="flex flex-col items-center mx-6 p-4 justify-center"
                 key={list.id}
               >
                 <Card

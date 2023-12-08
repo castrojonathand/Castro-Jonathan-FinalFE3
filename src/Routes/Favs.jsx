@@ -23,7 +23,7 @@ const Favs = () => {
         <h1 className="my-4 mx-auto sm:w-[774px] md:w-[px] lg:w-[1324px]">
           Dentists Favs
         </h1>
-        <div className="grid justify-center sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 flex-wrap h-auto max-w-7xl mx-auto text-center">
+        <div className="flex flex-wrap justify-center gap-4 h-auto max-w-7xl mx-auto text-center">
           {dataState.favs.length === 0 ? (
             <h1 className="my-4 mx-auto sm:w-[774px] md:w-[px] lg:w-[1324px]">
               No hay favoritos 🤷‍♂️
