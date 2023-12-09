@@ -54,13 +54,17 @@ const Navbar = () => {
           </div>
         </div>
 
-        <div className={`link ${isOpen ? "open" : "close"} text-center mr-20`}>
+        <div
+          className={`link ${
+            isOpen ? "open" : "close"
+          } text-center hover:text-white`}
+        >
           <Link to="/home" onClick={() => setIsOpen(!isOpen)}>
-            <h3 className="relative inline-block cursor-pointer">
+            <h3>
               Home
-              <span
+              {/* <span
                 className={`absolute inset-x-0 scale-x-0 bottom-0 h-0.5 bg-white w-full transform origin-left transition hover:duration-300 hover:scale-125`}
-              ></span>
+              ></span> */}
             </h3>
           </Link>
           <Link to="/contact" onClick={() => setIsOpen(!isOpen)}>
@@ -81,12 +85,12 @@ const Navbar = () => {
             <span></span>
           </div>
           <div className="flex justify-between gap-2">
-            <Me />            
+            <Me />
           </div>
         </div>
 
         <button
-          id='theme'
+          id="theme"
           onClick={changeTheme}
           className="mr-4 text-lg bg-white rounded-xl p-2 m-1"
         >
