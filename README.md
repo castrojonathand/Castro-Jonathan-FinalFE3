@@ -2,7 +2,7 @@
 
 Proyecto que consume una API la cual devuelve informacion de 10 dentistas que son renderizados en cartas de presentacion para una mejor visualizacion `bashh`.
 
-[![DentistAPI](./public/images/Dentist.PNG)](https://aws-reactjs-castro-jonathan.s3.amazonaws.com/index.html)
+[![DentistAPI](./public/images/dentistCard.PNG)](https://aws-reactjs-castro-jonathan.s3.amazonaws.com/index.html)
 
 ## Funcionalidades actuales y futuras
 

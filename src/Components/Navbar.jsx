@@ -54,24 +54,15 @@ const Navbar = () => {
           </div>
         </div>
 
-        <div
-          className={`link ${
-            isOpen ? "open" : "close"
-          } text-center mr-28`}
-        >
+        <div className={`link ${isOpen ? "open" : "close"} text-center mr-28`}>
           <Link to="/home" onClick={() => setIsOpen(!isOpen)}>
-            <h3>
-              Home
-              {/* <span
-                className={`absolute inset-x-0 scale-x-0 bottom-0 h-0.5 bg-white w-full transform origin-left transition hover:duration-300 hover:scale-125`}
-              ></span> */}
-            </h3>
+            <h3 id="hov">Home</h3>
           </Link>
           <Link to="/contact" onClick={() => setIsOpen(!isOpen)}>
-            <h3 className="">Contact</h3>
+            <h3 id="hov">Contact</h3>
           </Link>
           <Link to="/favs" onClick={() => setIsOpen(!isOpen)}>
-            <h3 className="">Favs</h3>
+            <h3 id="hov">Favs</h3>
           </Link>
         </div>
 
@@ -92,7 +83,8 @@ const Navbar = () => {
         <button
           id="theme"
           onClick={changeTheme}
-          className="mr-4 text-lg bg-white rounded-xl p-2 m-1 hover:bg-gray-600 hover:text-white"
+          className={`mr-4 text-lg bg-white rounded-xl p-2 m-1 hover:bg-gray-600 hover:text-white
+          ${dataState.theme ? "" : "hover:bg-white hover:text-black"}`}
         >
           {dataState.theme ? "Dark mode" : "Light mode"}
         </button>

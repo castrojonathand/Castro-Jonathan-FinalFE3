@@ -51,11 +51,7 @@ div > img {
 a{
   color: #000;
   text-decoration: none;  
-  cursor: pointer;
-  
-}
-a:hover{
-  color: white 
+  cursor: pointer;  
 } 
 
 button:hover {
@@ -82,7 +78,7 @@ form{
   border: 0.5px solid rgb(5, 5, 0);
 }
 
-
+/* 
 .buttonNav{
   font-size: 17px;  
   width: 35px;
@@ -91,13 +87,20 @@ form{
   margin: 2px;
   border-radius: 10px; 
   
-}
+} */
 
 .link{  
   width: 20vw;
   display: flex;
   justify-content: space-around; 
-  gap: 1rem;   
+  gap: 1rem;
+}
+
+#hov:hover{
+  color: white;
+}
+.dark #hov:hover {
+  color: black;
 }
 
 table {
@@ -126,7 +129,6 @@ tr:nth-child(even) {
   @apply bg-primary;
   
 }
-
 .dark .card{
   background-color: #87949854;
   color: white;
@@ -136,13 +138,14 @@ tr:nth-child(even) {
   color: white;
 }
 .dark .card:hover { 
-  box-shadow: rgba(255, 255, 255, 0.572) 0px 0px 25px 5px;
+box-shadow: rgb(255, 255, 255) 0px 20px 30px -10px;
 }
 .dark button{
   color: white;
   background-color: #4f9cad;
 }
-.dark a:hover {
+
+.dark #theme:hover {
   color: black
 }
 
