@@ -29,7 +29,7 @@ function App() {
   return (
     <div
       className={`${dataState.theme ? "" : "dark"}
-      min-h-screen min-w-full flex flex-col justify-between`}
+      min-h-screen min-w-full flex flex-col justify-between text-xl`}
     >
       <Navbar />
       <div>

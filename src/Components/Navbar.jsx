@@ -18,7 +18,7 @@ const Navbar = () => {
     <nav>
       <div
         id="nav"
-        className="flex justify-between items-center gap-4 w-full mr-2"
+        className="flex justify-between items-center gap-4 w-full p-1 mr-2"
       >
         <div className="navigate">
           {/* <button className="buttonNav" onClick={() => navigate(-1)}>
@@ -35,7 +35,7 @@ const Navbar = () => {
               rel="noopener noreferrer"
             >
               <img
-                className="w-10 h-10 bg-white rounded-full"
+                className="w-12 h-12 bg-white rounded-full"
                 src="/images/github-mark.png"
                 alt="GitHub"
               />
@@ -46,7 +46,7 @@ const Navbar = () => {
               rel="noopener noreferrer"
             >
               <img
-                className="w-10 h-10 bg-white rounded"
+                className="w-12 h-12 bg-white rounded"
                 src="/images/linkedin.png"
                 alt="LinkedIn"
               />
@@ -81,8 +81,7 @@ const Navbar = () => {
             <span></span>
           </div>
           <div className="flex justify-between gap-2">
-            <Me />
-            {/* <img className="h-10 w-14" src="/images/linkedin-ico.png" alt="" /> */}
+            <Me />            
           </div>
         </div>
 

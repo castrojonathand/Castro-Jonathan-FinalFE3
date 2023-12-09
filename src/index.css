@@ -68,11 +68,11 @@ button:hover {
   
 }
 
-footer {
+/* footer {
   background-color: rgb(6 182 212);  
   width:100%;
   
-}
+} */
 
 form{
   display: flex;
@@ -219,9 +219,13 @@ tr:nth-child(even) {
     @media (max-width: 473px) {
 
       #theme{
-        padding: 4px;               
+        padding: 8px;               
         font-size: 15px;
-        line-height: normal;
+        line-height: 21px;
+        margin: auto;
+      }
+      #me{
+        font-size: medium;
       }
 
     }
