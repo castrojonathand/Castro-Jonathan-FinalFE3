@@ -15,26 +15,22 @@ const Home = () => {
   const [currentPage, setCurrentPage] = useState(1);
   
   const lastIndex = currentPage * cardsPerPage;
-  const firstIndex = lastIndex - cardsPerPage;
-
-  
+  const firstIndex = lastIndex - cardsPerPage;  
 
   const handleRemoveFav = (id) => {
     const updatedFavs = dataState.favs.filter((fav) => fav.id !== id);
     localStorage.setItem("favs", JSON.stringify(updatedFavs));
     dataDispatch({ type: "ADD_FAV", payload: updatedFavs }); 
   };
-  
-
 
   return (    
       <div className="mt-[100px] py-2 text-center">
         <h3> (click on the card to see details)</h3>        
-        <div className="flex flex-wrap justify-center gap-4 h-auto mx-auto my-14 text-center">
+        <div className="flex flex-wrap justify-center gap-4 h-auto mx-auto my-6 text-center">
           {dataState.listData
             .map((list) => (
               <div
-                className="flex flex-col items-center mx-6 p-4 justify-center"
+                className="flex flex-col items-center mx-4 p-4 justify-center"
                 key={list.id}
               >
                 <Card

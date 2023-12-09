@@ -57,7 +57,7 @@ const Navbar = () => {
         <div
           className={`link ${
             isOpen ? "open" : "close"
-          } text-center hover:text-white`}
+          } text-center mr-28`}
         >
           <Link to="/home" onClick={() => setIsOpen(!isOpen)}>
             <h3>
@@ -92,7 +92,7 @@ const Navbar = () => {
         <button
           id="theme"
           onClick={changeTheme}
-          className="mr-4 text-lg bg-white rounded-xl p-2 m-1"
+          className="mr-4 text-lg bg-white rounded-xl p-2 m-1 hover:bg-gray-600 hover:text-white"
         >
           {dataState.theme ? "Dark mode" : "Light mode"}
         </button>

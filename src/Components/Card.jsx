@@ -30,7 +30,7 @@ const Card = ({ name, username, id, favToggle, onRemoveFav }) => {
   return (
     <div className="min-w-min border border-black rounded-2xl hover:shadow-2xl">
       <Link to={`/home/dentist/${id}`}>
-        <div className="max-w-xs ">
+        <div className="max-w-xs">
           <img
             className="w-full rounded-t-2xl"
             src="/images/doctor.jpg"

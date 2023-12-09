@@ -55,7 +55,7 @@ a{
   
 }
 a:hover{
-  color: rgb(136, 136, 136);  
+  color: white 
 } 
 
 button:hover {
@@ -142,12 +142,15 @@ tr:nth-child(even) {
   color: white;
   background-color: #4f9cad;
 }
+.dark a:hover {
+  color: black
+}
 
 .navToggle{
   display: none;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 970px) {
     
     .dark.link{
     background-color: #030000ae;
@@ -173,7 +176,7 @@ tr:nth-child(even) {
     }
     .link.open{
       transform: translateX(0);
-      transform: translateY(26%);
+      transform: translateY(13%);
       transition: 0.3s ease all;      
       justify-content: center;
     }
@@ -191,11 +194,12 @@ tr:nth-child(even) {
     .navToggle{
       display: flex !important;   
       align-items: center;      
-      margin: 10px;
-      gap: 1rem;
-      
+      /* margin: 10px; */
+      gap: 1rem;     
     }
-
+    #theme{
+      padding: 10px;
+    }
     .navigate{
       display: none;
     }
@@ -211,10 +215,14 @@ tr:nth-child(even) {
     @media (max-width: 473px) {
 
       #theme{
-        padding: 8px;               
+        padding: 6px;               
         font-size: 15px;
-        line-height: 21px;
-        margin: auto;
+        line-height: 35px;
+        margin: auto;        
+      }
+      .dark #theme:hover{
+          color: black;
+          background: white        
       }
       #me{
         font-size: medium;
