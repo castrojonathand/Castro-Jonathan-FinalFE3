@@ -43,10 +43,10 @@ export const Pagination = ({
           className={
             dataState.theme
               ? `h-12 border-2 border-r-0  px-4 rounded-l-lg border-primary hover:bg-primary hover:opacity-60 hover:text-white ${
-                  currentPage === 1 ? "cursor-not-allowed opacity-30" : ""
+                  currentPage === 1 && "cursor-not-allowed opacity-30"
                 }`
-              : `h-12 border-2 border-r-0 border-black px-4 rounded-l-lg hover:bg-gray-600 hover:opacity-80 hover:text-black ${
-                  currentPage === 1 ? "cursor-not-allowed opacity-30" : ""
+              : `h-12 border-2 border-r-0 px-4 rounded-l-lg border-black hover:bg-gray-600 hover:opacity-80 hover:text-black ${
+                  currentPage === 1 && "cursor-not-allowed opacity-40"
                 }`
           }
           disabled={currentPage === 1}
@@ -71,7 +71,7 @@ export const Pagination = ({
                   }`
                 : `h-12 w-12 border-2 border-r-0 border-black hover:bg-gray-600 hover:opacity-80 hover:text-black ${
                     currentPage === pg &&
-                    "!bg-black opacity-95 border-r-2 hover:text-white"
+                    "!bg-black opacity-95 hover:text-white"
                   }`
             }
           >
@@ -84,14 +84,10 @@ export const Pagination = ({
           className={
             dataState.theme
               ? `h-12 border-2 px-4 rounded-r-lg border-primary hover:bg-primary hover:opacity-60 hover:text-white ${
-                  currentPage >= totalPages
-                    ? "border-black cursor-not-allowed opacity-30 border-l-0"
-                    : ""
+                  currentPage >= totalPages && "cursor-not-allowed opacity-30"
                 }`
               : `h-12 border-2  px-4 rounded-r-lg border-black hover:bg-gray-600 hover:opacity-80 hover:text-black ${
-                  currentPage >= totalPages
-                    ? "border-black cursor-not-allowed border-l-2 hover:bg-black"
-                    : ""
+                  currentPage >= totalPages && "cursor-not-allowed opacity-40"
                 }`
           }
           disabled={currentPage >= totalPages}
