@@ -2,7 +2,7 @@ import React from 'react'
 
 const Me = () => {
     return (
-      <div id='me' className={`flex py-1 first:pt-0 last:pb-0 ml-1 text-xl`}>
+      <div id='me' className={`flex py-1 first:pt-0 last:pb-0 ml-1 text-lg`}>
         <img
           className="h-14 w-14 rounded-full"
           src="/images/jonathan.jpeg"

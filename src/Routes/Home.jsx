@@ -15,7 +15,7 @@ const Home = () => {
   const [currentPage, setCurrentPage] = useState(1);
   
   const lastIndex = currentPage * cardsPerPage;
-  const firstIndex = lastIndex - cardsPerPage;  
+  const firstIndex = lastIndex - cardsPerPage;
 
   const handleRemoveFav = (id) => {
     const updatedFavs = dataState.favs.filter((fav) => fav.id !== id);
@@ -23,34 +23,34 @@ const Home = () => {
     dataDispatch({ type: "ADD_FAV", payload: updatedFavs }); 
   };
 
-  return (    
-      <div className="mt-[100px] py-2 text-center">
-        <h3> (click on the card to see details)</h3>        
-        <div className="flex flex-wrap justify-center gap-4 h-auto mx-auto my-6 text-center">
-          {dataState.listData
-            .map((list) => (
-              <div
-                className="flex flex-col items-center mx-4 p-4 justify-center"
-                key={list.id}
-              >
-                <Card
-                  name={list.name}
-                  username={list.username}
-                  id={list.id}
-                  favToggle={list.toggle}
-                  onRemoveFav={() => handleRemoveFav}
-                />
-              </div>
-            ))
-            .slice(firstIndex, lastIndex)}
-        </div>
-        <Pagination
-          currentPage={currentPage}
-          cardsPerPage={cardsPerPage}
-          setCurrentPage={setCurrentPage}
-          totalCards={totalCards}
-        />
-      </div>    
+  return (
+    <div className=" mt-24 py-4 text-center">
+      <h3> (click on the card to see details)</h3>
+      <div className="flex flex-wrap justify-center gap-4 h-auto mx-auto my-6 text-center">
+        {dataState.listData
+          .map((list) => (
+            <div
+              className="flex flex-col items-center justify-center mx-4 p-4 "
+              key={list.id}
+            >
+              <Card
+                name={list.name}
+                username={list.username}
+                id={list.id}
+                favToggle={list.toggle}
+                onRemoveFav={() => handleRemoveFav}
+              />
+            </div>
+          ))
+          .slice(firstIndex, lastIndex)}
+      </div>
+      <Pagination
+        currentPage={currentPage}
+        cardsPerPage={cardsPerPage}
+        setCurrentPage={setCurrentPage}
+        totalCards={totalCards}
+      />
+    </div>
   );
 };
 

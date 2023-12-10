@@ -1,7 +1,10 @@
 import React, { useState } from "react";
+import { useGlobalContext } from "./utils/global.context";
 
 
 const Form = () => {
+
+  const { dataState} = useGlobalContext();
   
   const [state ,setState] = useState({
     nombre: '',
@@ -33,11 +36,14 @@ const Form = () => {
 
   return (
     <div className="m-4 p-4">
-      <form onSubmit={handleSubmit}>
+      <form
+        className={dataState.theme ? "" : "bg-[#4f9cad]"}
+        onSubmit={handleSubmit}
+      >
         <span>Condiciones:</span>
         <ul className="m-4 text-start">
-          <li>* nombre: mayor a 3 caracteres</li>
-          <li>* mail: con @ y .com</li>
+          <li>* Nombre: mayor a 3 caracteres</li>
+          <li>* Email: con @ y .com</li>
         </ul>
         <label> Name: </label>
         <input
@@ -62,11 +68,15 @@ const Form = () => {
         />
         <br />
 
-        <button className="bg-primary w-1/3 mx-auto rounded-md my-2">
+        <button
+          className={`w-1/3 mx-auto rounded-lg m-2 p-2 ${
+            dataState.theme ? "bg-primary" : ""
+          }`}
+        >
           Enviar
         </button>
-        {state.error && <p className="text-red-500">* {state.message}</p>}
-        {!state.error && <p className="text-green-500">* {state.message}</p>}
+        {state.error && <p className="text-red-500">{state.message}</p>}
+        {!state.error && <p className="text-green-500">{state.message}</p>}
       </form>
     </div>
   );

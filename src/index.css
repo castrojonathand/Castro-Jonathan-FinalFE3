@@ -56,10 +56,8 @@ a{
 
 button:hover {
   cursor: pointer;
-  color: rgb(63, 62, 62);
-  
+  color: rgb(63, 62, 62);  
 }
-
 
 form{
   display: flex;
@@ -77,17 +75,6 @@ form{
   box-shadow: rgba(0, 0, 0, 0.25) 0px 0px 25px 5px;
   border: 0.5px solid rgb(5, 5, 0);
 }
-
-/* 
-.buttonNav{
-  font-size: 17px;  
-  width: 35px;
-  height: 33px;
-  padding-bottom: 10px;
-  margin: 2px;
-  border-radius: 10px; 
-  
-} */
 
 .link{  
   width: 20vw;
@@ -142,7 +129,7 @@ box-shadow: rgb(255, 255, 255) 0px 20px 30px -10px;
 }
 .dark button{
   color: white;
-  background-color: #4f9cad;
+  background-color:#030000cb;
 }
 
 .dark #theme:hover {
