@@ -83,10 +83,10 @@ form{
   gap: 1rem;
 }
 
-#hov:hover{
+#h3nav:hover{
   color: white;
 }
-.dark #hov:hover {
+.dark #h3nav:hover {
   color: black;
 }
 
@@ -129,7 +129,7 @@ box-shadow: rgb(255, 255, 255) 0px 20px 30px -10px;
 }
 .dark button{
   color: white;
-  background-color:#030000cb;
+  background-color:#4f9cad;
 }
 
 .dark #theme:hover {

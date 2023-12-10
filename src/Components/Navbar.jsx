@@ -56,13 +56,13 @@ const Navbar = () => {
 
         <div className={`link ${isOpen ? "open" : "close"} text-center mr-52`}>
           <Link to="/home" onClick={() => setIsOpen(!isOpen)}>
-            <h3 id="hov">Home</h3>
+            <h3 id="h3nav">Home</h3>
           </Link>
           <Link to="/contact" onClick={() => setIsOpen(!isOpen)}>
-            <h3 id="hov">Contact</h3>
+            <h3 id="h3nav">Contact</h3>
           </Link>
           <Link to="/favs" onClick={() => setIsOpen(!isOpen)}>
-            <h3 id="hov">Favs</h3>
+            <h3 id="h3nav">Favs</h3>
           </Link>
         </div>
 

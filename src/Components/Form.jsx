@@ -37,7 +37,7 @@ const Form = () => {
   return (
     <div className="m-4 p-4">
       <form
-        className={dataState.theme ? "" : "bg-[#4f9cad]"}
+        className={dataState.theme ? "" : " bg-gray-500"}
         onSubmit={handleSubmit}
       >
         <span>Condiciones:</span>
