@@ -35,19 +35,19 @@ const Form = () => {
   };
 
   return (
-    <div className="m-4 p-4">
+    <div className="mx-auto">
       <form
         className={dataState.theme ? "" : " bg-gray-500"}
         onSubmit={handleSubmit}
       >
         <span>Condiciones:</span>
-        <ul className="m-4 text-start">
+        <ul className="m-2 text-start">
           <li>* Nombre: mayor a 3 caracteres</li>
           <li>* Email: con @ y .com</li>
         </ul>
         <label> Name: </label>
         <input
-          className="p-1 border border-gray-700 rounded-md w-full focus:outline-none focus:ring-2 text-black mt-1 block px-3 py-2 bg-white text-sm shadow-sm placeholder-slate-400
+          className="border border-gray-700 rounded-md w-full focus:outline-none focus:ring-2 text-black mt-1 block px-3 py-2 bg-white text-sm shadow-sm placeholder-slate-400
     focus:border-sky-500 focus:ring-sky-500
       disabled:bg-slate-50 disabled:text-slate-500 disabled:border-slate-200 disabled:shadow-none
       invalid:border-pink-500 invalid:text-red-500
@@ -58,7 +58,7 @@ const Form = () => {
         <br />
         <label> Email: </label>
         <input
-          className="p-1 border border-gray-700 rounded-md w-full focus:outline-none focus:ring-2 text-black mt-1 block px-3 py-2 bg-white text-sm shadow-sm placeholder-slate-400
+          className="border border-gray-700 rounded-md w-full focus:outline-none focus:ring-2 text-black mt-1 block px-3 py-2 bg-white text-sm shadow-sm placeholder-slate-400
     focus:border-sky-500 focus:ring-sky-500
       disabled:bg-slate-50 disabled:text-slate-500 disabled:border-slate-200 disabled:shadow-none
       invalid:border-pink-500 invalid:text-red-500
