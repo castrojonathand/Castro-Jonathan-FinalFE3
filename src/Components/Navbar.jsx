@@ -18,7 +18,7 @@ const Navbar = () => {
     <nav>
       <div
         id="nav"
-        className="flex justify-between items-center gap-4 w-full p-1 mr-2"
+        className="flex justify-between items-center gap-4 w-full p-1"
       >
         <div className="navigate">
           {/* <button className="buttonNav" onClick={() => navigate(-1)}>
@@ -83,10 +83,19 @@ const Navbar = () => {
         <button
           id="theme"
           onClick={changeTheme}
-          className={`mr-4 text-lg bg-white rounded-lg p-2 m-1 hover:bg-gray-600 hover:text-white
-          ${dataState.theme ? "" : "hover:bg-white hover:text-black"}`}
+          className={`mr-4 text-lg rounded-full p-3 bg-gray-500 
+          ${dataState.theme ? "" : "!bg-white hover:bg-black"}`}
         >
-          {dataState.theme ? "Dark mode" : "Light mode"}
+          <img
+            width={30}
+            height={30}
+            src={
+              dataState.theme
+                ? "/images/moon-stars-svgrepo-com2.svg"
+                : "/images/sun-black.svg"
+            }
+            alt={dataState.theme ? "Dark" : "Light"}
+          />
         </button>
       </div>
     </nav>
