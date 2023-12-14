@@ -84,7 +84,7 @@ const Navbar = () => {
           id="theme"
           onClick={changeTheme}
           className={`mr-4 text-lg rounded-full p-3 bg-gray-500 
-          ${dataState.theme ? "" : "!bg-white hover:bg-black"}`}
+          ${dataState.theme ? "" : "!bg-white"}`}
         >
           <img
             width={30}
