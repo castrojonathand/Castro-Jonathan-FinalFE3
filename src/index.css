@@ -149,26 +149,32 @@ box-shadow: rgb(255, 255, 255) 0px 20px 30px -10px;
     }
     .link{
       position: absolute;
-      top:60px;
+      top:31px;
       left:0px;
       background-color: #06B6D4;      
       color:white;
       display: flex;
-      flex-direction: column; 
-      width: 30%;
-      height: 150px;      
-      /* border: solid 3px #4f9cad; */
+      flex-direction: column;        
+      border-bottom-right-radius: 100%;
+      justify-content:flex-start;
+      line-height: 60px;
+      padding-top: 40px;
+      
       
     }  
     .link.close{
-      transform: translateX(-104%);      
-      transition: 0.3s ease all;
+      
+      transform: rotate(90deg) translate(49px, 750px);
+      width: 100vh;
+      height: 100vh;
+      transition: 0.6s ease all;      
     }
+    
     .link.open{
-      transform: translateX(0);
-      transform: translateY(13%);
-      transition: 0.3s ease all;      
-      justify-content: center;
+      transform: rotate(0deg) translate(0px, 49px);
+      width: 100vh;
+      height: 100vh;
+      transition: 0.6s ease all;   
     }
     
     .hamburg span{

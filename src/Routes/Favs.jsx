@@ -35,7 +35,7 @@ const Favs = () => {
         </h1>
         <div className="flex flex-wrap justify-center gap-4 h-auto max-w-7xl mx-auto my-6 text-center">
           {dataState.favs.length === 0 ? (
-            <h1 className="my-4 mx-auto sm:w-[774px] md:w-[px] lg:w-[1324px]">
+            <h1 className="mt-28 mx-auto sm:w-[774px] md:w-[px] lg:w-[1324px] xs:text-sm lg:text-2xl">
               No hay favoritos 🤷‍♂️
             </h1>
           ) : (
@@ -57,12 +57,14 @@ const Favs = () => {
               .slice(firstIndex, lastIndex)
           )}
         </div>
+        {dataState.favs.length === 0 ? "" :
         <Pagination
           currentPage={currentPage}
           cardsPerPage={cardsPerPage}
           setCurrentPage={setCurrentPage}
           totalCards={totalCards}
         />
+}
       </div>
     </>
   );

@@ -18,7 +18,7 @@ const Navbar = () => {
     <nav>
       <div
         id="nav"
-        className="flex justify-between items-center gap-4 w-full p-1"
+        className="flex justify-between items-center gap-4 w-full p-1 border-2"
       >
         <div className="navigate">
           {/* <button className="buttonNav" onClick={() => navigate(-1)}>
