@@ -164,16 +164,16 @@ box-shadow: rgb(255, 255, 255) 0px 20px 30px -10px;
     }  
     .link.close{
       
-      transform: rotate(90deg) translate(49px, 750px);
-      width: 100vh;
-      height: 100vh;
+      transform: rotate(90deg) translate(20px, 850px);
+      width: 40vh;
+      height: 90vh;
       transition: 0.6s ease all;      
     }
     
     .link.open{
       transform: rotate(0deg) translate(0px, 49px);
-      width: 100vh;
-      height: 100vh;
+      width: 40vh;
+      height: 90vh;
       transition: 0.6s ease all;   
     }
     
@@ -211,10 +211,8 @@ box-shadow: rgb(255, 255, 255) 0px 20px 30px -10px;
     @media (max-width: 473px) {
 
       #theme{
-        padding: 6px;               
-        font-size: 15px;
-        line-height: 35px;
-        margin: auto;        
+        padding: 6px;
+        margin-right: 5px;      
       }
       .dark #theme:hover{
           color: black;
