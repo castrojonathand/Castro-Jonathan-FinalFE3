@@ -1,3 +1,4 @@
+
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 import { useGlobalContext } from './utils/global.context'
@@ -67,9 +68,8 @@ const Navbar = () => {
         </div>
 
         <div className="navToggle">
-          <div
-            className={`hamburg ${isOpen && "open"}`}
-            onClick={() => setIsOpen(!isOpen)}
+          <div className={`hamburg ${isOpen && "open"}`}
+              onClick={() => setIsOpen(!isOpen)}
           >
             <span></span>
             <span></span>

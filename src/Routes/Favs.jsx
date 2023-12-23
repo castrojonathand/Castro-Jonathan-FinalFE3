@@ -7,7 +7,7 @@ const Favs = () => {
   
   const { dataState, dataDispatch } = useGlobalContext();
 
-  const CARDS_PER_PAGE = 2;
+  const CARDS_PER_PAGE = 4;
   const totalCards = dataState.favs.length;
   // eslint-disable-next-line no-unused-vars
   const [cardsPerPage, setCardsPerPage] = useState(CARDS_PER_PAGE);
