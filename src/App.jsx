@@ -32,7 +32,7 @@ function App() {
       min-h-screen min-w-full flex flex-col justify-between text-xl`}
     >
       <Navbar />
-      <div>
+      <div className="m-10 min-w-min">
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/index.html" element={<Home />} />
