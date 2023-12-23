@@ -10,6 +10,7 @@ Proyecto que consume una API la cual devuelve informacion de 10 dentistas que so
 - [x] Dark mode
 - [x] Paginación
 - [x] Favoritos
+- [x] Deploy en AWS S3
 - [ ] Mensajeria con **Nodemailer**
 - [ ] Authentication
 
