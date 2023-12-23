@@ -36,7 +36,7 @@ export const Pagination = ({
     setCurrentPage(currentPage - 1);
   }
   return (
-    <div className="flex flex-col justify-center items-center">
+    <div className="flex flex-col justify-center items-center p-2">
       <div className="bg-white rounded-lg font-[Poppins] flex items-center">
         <button
           onClick={Back}

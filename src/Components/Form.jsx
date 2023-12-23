@@ -35,7 +35,7 @@ const Form = () => {
   };
 
   return (
-    <div className="mx-auto">
+    <div className="mx-auto justify-center items-center">
       <form
         className={`p-5 ${dataState.theme ? "" : " bg-gray-500"}`}
         onSubmit={handleSubmit}

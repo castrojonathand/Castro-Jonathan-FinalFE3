@@ -24,9 +24,9 @@ const Home = () => {
   };
 
   return (
-    <div className=" mt-24 py-4 text-center">
+    <div className="h-auto mx-auto mt-20 py-4 text-center">
       <h3> (click on the card to see details)</h3>
-      <div className="flex flex-wrap justify-center gap-4 h-auto mx-auto my-6 text-center">
+      <div className="flex flex-wrap justify-center gap-4 my-4 text-center">
         {dataState.listData
           .map((list) => (
             <div

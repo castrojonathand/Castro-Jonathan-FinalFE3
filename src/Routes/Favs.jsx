@@ -29,11 +29,11 @@ const Favs = () => {
     console.log("dataState.favs>>",dataState.favs)
   return (
     <>
-      <div className="mt-24 py-4">
+      <div className="mt-20 py-4">
         <h1 className="mx-auto sm:w-[774px] md:w-[px] lg:w-[1324px]">
           Dentists Favs
         </h1>
-        <div className="flex flex-wrap justify-center gap-4 h-auto mx-auto my-6 text-center">
+        <div className="flex flex-wrap justify-center gap-4 h-auto mx-auto my-4 text-center">
           {dataState.favs.length === 0 ? (
             <h1 className="mt-28 mx-auto sm:w-[774px] md:w-[px] lg:w-[1324px] xs:text-sm lg:text-2xl">
               No hay favoritos 🤷‍♂️
@@ -57,14 +57,16 @@ const Favs = () => {
               .slice(firstIndex, lastIndex)
           )}
         </div>
-        {dataState.favs.length === 0 ? "" :
-        <Pagination
-          currentPage={currentPage}
-          cardsPerPage={cardsPerPage}
-          setCurrentPage={setCurrentPage}
-          totalCards={totalCards}
-        />
-}
+        {dataState.favs.length === 0 ? (
+          ""
+        ) : (
+          <Pagination
+            currentPage={currentPage}
+            cardsPerPage={cardsPerPage}
+            setCurrentPage={setCurrentPage}
+            totalCards={totalCards}
+          />
+        )}
       </div>
     </>
   );
