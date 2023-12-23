@@ -131,6 +131,10 @@ box-shadow: rgb(255, 255, 255) 0px 20px 30px -10px;
   color: white;
   background-color:#4f9cad;
 }
+.dark button:hover {  
+  background-color: black;
+  opacity: 60%;
+}
 
 .dark #theme:hover {
   color: black

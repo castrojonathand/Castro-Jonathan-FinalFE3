@@ -37,15 +37,16 @@ const Form = () => {
   return (
     <div className="mx-auto">
       <form
-        className={dataState.theme ? "" : " bg-gray-500"}
+        className={`p-5 ${dataState.theme ? "" : " bg-gray-500"}`}
         onSubmit={handleSubmit}
       >
         <span>Condiciones:</span>
-        <ul className="m-2 text-start">
+        <ul className="m-2 py-2 text-start">
           <li>* Nombre: mayor a 3 caracteres</li>
           <li>* Email: con @ y .com</li>
         </ul>
-        <label> Name: </label>
+        
+        <label className="text-start"> Name: </label>
         <input
           className="border border-gray-700 rounded-md w-full focus:outline-none focus:ring-2 text-black mt-1 block px-3 py-2 bg-white text-sm shadow-sm placeholder-slate-400
     focus:border-sky-500 focus:ring-sky-500
@@ -56,7 +57,7 @@ const Form = () => {
           onBlur={(e) => setState({ ...state, nombre: e.target.value })}
         />
         <br />
-        <label> Email: </label>
+        <label className="text-start"> Email: </label>
         <input
           className="border border-gray-700 rounded-md w-full focus:outline-none focus:ring-2 text-black mt-1 block px-3 py-2 bg-white text-sm shadow-sm placeholder-slate-400
     focus:border-sky-500 focus:ring-sky-500
@@ -69,9 +70,7 @@ const Form = () => {
         <br />
 
         <button
-          className={`w-1/3 mx-auto rounded-lg m-2 p-2 ${
-            dataState.theme ? "bg-primary" : ""
-          }`}
+          className={`w-1/3 mx-auto rounded-lg m-2 p-2 bg-primary hover:bg-opacity-70 hover:border-1`}
         >
           Enviar
         </button>
