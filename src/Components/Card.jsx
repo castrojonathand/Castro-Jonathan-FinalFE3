@@ -36,7 +36,7 @@ const Card = ({ name, username, id, favToggle, onRemoveFav }) => {
             src="/images/doctor.jpg"
             alt="doctor"
           />
-          <div className="p-2">
+          <div className="p-2 ${} bg-gray-500">
             <h3>{name}</h3>
             <h3>{username}</h3>
             <h3>{`ID: ${id}`}</h3>

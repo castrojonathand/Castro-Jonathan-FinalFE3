@@ -31,8 +31,8 @@ h1{
 }
 nav{
   @apply bg-primary;
-  display: flex;   
-  justify-content: space-between;  
+  display: flex;
+  justify-content: space-between;
   padding: 0.5rem;
   align-items: center;
   position: fixed;
