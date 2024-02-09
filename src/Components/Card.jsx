@@ -1,7 +1,9 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import { useGlobalContext } from "./utils/global.context";
 
 const Card = ({ name, username, id, favToggle, onRemoveFav }) => {
+  const { dataState } = useGlobalContext();
   const [toggle, setToggle] = useState(favToggle);
 
   useEffect(() => {
@@ -36,7 +38,11 @@ const Card = ({ name, username, id, favToggle, onRemoveFav }) => {
             src="/images/doctor.jpg"
             alt="doctor"
           />
-          <div className="p-2 ${} bg-gray-500">
+          <div className={ 
+            dataState.theme 
+            ? `bg-white`
+            : `bg-gray-500` 
+          }>
             <h3>{name}</h3>
             <h3>{username}</h3>
             <h3>{`ID: ${id}`}</h3>
