@@ -19,6 +19,6 @@ Proyecto que consume una API la cual devuelve informacion de 10 dentistas que so
 ## Tech Stack
 
 - **Frontend:** [Vite](https://vitejs.dev/)
-- **BackAPI:** [jsonplaceholder](https://jsonplaceholder.typicode.com/users)
+- **Back/API:** [jsonplaceholder](https://jsonplaceholder.typicode.com/users)
 - **Styling:** [Tailwind CSS](https://tailwindcss.com)
 
