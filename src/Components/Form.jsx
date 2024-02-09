@@ -37,7 +37,7 @@ const Form = () => {
   return (
     <div className="mx-auto justify-center items-center">
       <form
-        className={`p-5 ${dataState.theme ? "" : " bg-gray-500"}`}
+        className={`p-5 lg:p-10 ${dataState.theme ? "" : " bg-gray-500"}`}
         onSubmit={handleSubmit}
       >
         <span>Condiciones:</span>
