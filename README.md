@@ -6,6 +6,7 @@ Proyecto que consume una API la cual devuelve informacion de 10 dentistas que so
 
 ## Funcionalidades actuales y futuras
 
+
 - [x] Responsive
 - [x] Dark mode
 - [x] Paginación
