@@ -15,7 +15,7 @@ Proyecto que consume una API la cual devuelve informacion de 10 dentistas que so
 - [ ] Mensajeria con **Nodemailer**
 - [ ] Authentication
 
-## API utilizada: https://jsonplaceholder.typicode.com/users
+## API utilizada: https://jsonplaceholder.typicode.com/users 
 
 ## Tech Stack
 
