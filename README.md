@@ -11,7 +11,7 @@ Proyecto que consume una API la cual devuelve informacion de 10 dentistas que so
 - [x] Paginación
 - [x] Favoritos
 - [x] Deploy en AWS S3
-- [x] Local Storage para favoritos
+- [x] Manejo del local storage para renderizar favoritos. 
 - [ ] Mensajeria con **Nodemailer**
 - [ ] Authentication
 
